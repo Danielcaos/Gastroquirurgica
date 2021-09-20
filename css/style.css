@@ -1,0 +1,20 @@
+#menu {
+    background-color:    #f7f7f7;
+}
+
+#contenido {
+    padding-top: 50px;
+}
+
+.card {
+    margin: 0 auto;
+}
+
+.card-body {
+    background-color: #f7f7f7;
+}
+
+#politicas {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
