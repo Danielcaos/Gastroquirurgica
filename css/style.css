@@ -19,7 +19,7 @@
     padding-bottom: 15px;
 }
 
-#preguntas {
+#preguntas, #respuesta {
     padding-top: 50px;
     padding-left: 150px;
     padding-right: 150px; 
@@ -33,8 +33,13 @@
     text-decoration: none;
 }
 
-#contenido-pregunta {
-    padding-top: 30px;
-    width: 500px;
+#contenido-pregunta, #contenido-respuesta {
     margin: 0 auto;
 }
+
+@media only screen and (max-width: 767px){
+    #preguntas, #respuesta {
+        padding-left: 0;
+        padding-right: 0; 
+    }
+  }
