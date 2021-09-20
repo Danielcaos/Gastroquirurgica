@@ -18,3 +18,23 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+#preguntas {
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px; 
+}
+
+.progress-bar {
+    height: 10px;
+}
+
+#regresar {
+    text-decoration: none;
+}
+
+#contenido-pregunta {
+    padding-top: 30px;
+    width: 500px;
+    margin: 0 auto;
+}
