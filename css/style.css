@@ -46,7 +46,12 @@
     text-align: center;
 }
 
-#eleccion, #redes {
+#redes {
+    color: #2a6db3;
+    opacity: 0.8;
+}
+
+#eleccion{
     background-color: #2a6db3;
     opacity: 0.8;
 }
