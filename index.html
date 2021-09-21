@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gastroquirurgica</title>
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400&display=swap" rel="stylesheet">
+
     <!-- Icono Pestaña -->
     <link rel="shortcut icon" href="./resourse/img/pestaña.png" />
 
@@ -29,48 +34,62 @@
     <nav class="navbar" id="menu">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="./resourse/img/horizontal.png" alt="" width="200"
-                    class="img-fluid">
+                <img src="./resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
             </a>
+            <div style="color: #2a6db3; opacity: 0.8;">
+                <a href="https://unimeal.com/es/step-goal" target="_blanck"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href=""><i class="fab fa-instagram-square fa-2x"></i></a>
+                <a href=""><i class="fab fa-whatsapp-square fa-2x"></i></a>
+            </div>
         </div>
     </nav>
     <div class="container" id="contenido">
-        <h2>¿Quieres perder peso?</h2>
+        <div id="deseo" style="background-color: #2a6db3; padding-bottom: 3px; color: white;">
+            <h2>¿Quieres perder peso?</h2>
+        </div>
+        <br>
         <div class="row">
             <div class="col">
                 <div class="card mb-3">
                     <img src="./resourse/img/si.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Tema de interes para el usuario</h5>
-                      <a href="preguntas.html" class="btn btn-primary">Si</a>
+                        <h5 id="text" class="card-title">Tema de interes para el usuario</h5>
+                        <a id="eleccion" href="preguntas.html" class="btn btn-primary">Si</a>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="col">
                 <div class="card mb-3">
                     <img src="./resourse/img/no.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Tema de interes para el usuario</h5>
-                      <a href="portafolio.html" class="btn btn-primary">No</a>
+                        <h5 id="text" class="card-title">Tema de interes para el usuario</h5>
+                        <a id="eleccion" href="portafolio.html" class="btn btn-primary">No</a>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
         <div class="container" id="politicas">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
-                    Politicas de tratamiento de datos
+                    <p id="text">Politicas de tratamiento de datos</p>
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
-                    Politicas de tratamiento de datos
+                    <p id="text">Politicas de tratamiento de datos</p>
                 </label>
             </div>
         </div>
     </div>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <div style="margin: 0 auto;">
+                Copyright © Clinica Gastroquirurgica 2021
+            </div>
+        </div>
+    </nav>
 </body>
 
 </html>

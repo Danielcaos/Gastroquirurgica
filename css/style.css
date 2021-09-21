@@ -37,9 +37,34 @@
     margin: 0 auto;
 }
 
+#deseo {
+    background-color: #2a6db3;
+    padding-bottom: 3px;
+    color: white;
+    opacity: 0.5;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#eleccion {
+    background-color: #2a6db3;
+    opacity: 0.8;
+}
+
 @media only screen and (max-width: 991px){
     #preguntas, #respuesta {
         padding-left: 0;
         padding-right: 0; 
     }
-  }
+}
+
+#text {
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+}
+
+.card {
+    box-shadow: 0px 1px 5px 3px rgba(42,109,179,0.35);
+    -webkit-box-shadow: 0px 1px 5px 3px rgba(42,109,179,0.35);
+    -moz-box-shadow: 0px 1px 5px 3px rgba(42,109,179,0.35);
+}
