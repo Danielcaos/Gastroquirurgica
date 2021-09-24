@@ -63,6 +63,12 @@
     }
 }
 
+@media only screen and (max-width: 575px){
+    #lista-portafolio{
+        padding-top: 15px;
+    }
+}
+
 #text {
     font-family: 'PT Sans', sans-serif;
 }
