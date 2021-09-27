@@ -1,8 +1,6 @@
 function eleccionSi() {
-    if (document.getElementById('checkbox1').checked) {
-        window.location="preguntas.html";
-    } else {
-      var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    if (!document.getElementById('checkbox1').checked) {
+        var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
         var alertTrigger = document.getElementById('eleccionsi')
 
         function alert(message, type) {
@@ -16,7 +14,9 @@ function eleccionSi() {
             alertTrigger.addEventListener('click', function () {
                 alert('Para continuar, acepta nuestros términos y políticas', 'success')
             })
-        }  
-
-     }
+        } 
+        
+    } else {
+        window.location="preguntas.html";
+    }
 }
