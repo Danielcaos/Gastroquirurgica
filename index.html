@@ -37,10 +37,14 @@
                 <img src="./resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
             </a>
             <div id="redes">
-                <a href="https://unimeal.com/es/step-goal" target="_blanck"><i class="fab fa-facebook-square fa-2x"></i></a>
-                <a href="https://www.instagram.com/gastroquirurgicasas/" target="_blanck"><i class="fab fa-instagram-square fa-2x"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=3152732114, 3156785070, 3176679608" target="_blanck"><i class="fab fa-whatsapp-square fa-2x"></i></a>
-                <a href="https://g.page/r/CWWd_FM0mzhhEAE" target="_blanck"><i class="fab fa-google-plus-square fa-2x"></i></a>
+                <a href="https://unimeal.com/es/step-goal" target="_blanck"><i
+                        class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://www.instagram.com/gastroquirurgicasas/" target="_blanck"><i
+                        class="fab fa-instagram-square fa-2x"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=3152732114, 3156785070, 3176679608" target="_blanck"><i
+                        class="fab fa-whatsapp-square fa-2x"></i></a>
+                <a href="https://g.page/r/CWWd_FM0mzhhEAE" target="_blanck"><i
+                        class="fab fa-google-plus-square fa-2x"></i></a>
             </div>
         </div>
     </nav>
@@ -55,7 +59,7 @@
                     <img src="./resourse/img/si.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 id="text" class="card-title">Tema de interes para el usuario</h5>
-                        <a id="eleccion" href="preguntas.html" class="btn btn-primary">Si</a>
+                        <button id="eleccionsi" onclick="eleccionSi()" type="submit" class="btn btn-primary">Si</button>
                     </div>
                 </div>
             </div>
@@ -64,26 +68,36 @@
                     <img src="./resourse/img/no.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 id="text" class="card-title">Tema de interes para el usuario</h5>
-                        <a id="eleccion" href="portafolio.html" class="btn btn-primary">No</a>
+                        <a id="eleccionno" href="portafolio.html" class="btn btn-primary">No</a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+            <input type="email" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" placeholder="example@example.ex">
+        </div>
         <div class="container" id="politicas">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="checkbox1">
                 <label class="form-check-label" for="flexCheckDefault">
-                    <p id="text">Politicas de tratamiento de datos</p>
+                    <p id="text">Al continuar aceptas los terminos de la <a style="font-weight: bold;" target="_blanck"
+                            href="https://www.gastroquirurgica.com.co/politica-de-tratamiento-de-datos-personales/">POLÍTICA
+                            DE PRIVACIDAD EN EL
+                            TRATAMIENTO DE DATOS PERSONALES.</a></p>
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="checkbox2">
                 <label class="form-check-label" for="flexCheckDefault">
-                    <p id="text">Politicas de tratamiento de datos</p>
+                    <p id="text">Me gustaria recibir actualizaciones sobre los servicios de la Clinica
+                        Gastroquirurgica por correo electronico.</p>
                 </label>
             </div>
         </div>
     </div>
+    <div class="container" id="liveAlertPlaceholder"></div>
     <nav class="navbar navbar-light bg-light">
         <div class="container">
             <div style="margin: 0 auto;">
@@ -91,6 +105,7 @@
             </div>
         </div>
     </nav>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
