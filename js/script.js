@@ -1,5 +1,5 @@
 function eleccionSi() {
-    if (document.getElementById('checkbox1')) {
+    if (document.getElementById('checkbox1').checked) {
         window.location="preguntas.html";
     } else {
       var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
