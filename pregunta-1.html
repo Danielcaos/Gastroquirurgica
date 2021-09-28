@@ -87,19 +87,34 @@
                 </div>
                 <br>
                 <br>
-                <a href="pregunta-2.html">
-                    <button type="button" class="btn btn-primary btn-lg" style="width: 100%;">
-                        <div class="row">
-                            <div class="col" style="text-align: left;">
-                                SI
-                            </div>
-                            <div class="col" style="text-align: right;">
-                                <i class="fas fa-check"></i>
-                            </div>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Seleccion...</option>
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
+                </select>
+                <div class="input-group mb-3" style="padding-top: 17px;">
+                    <input id="edad" type="number" class="form-control" placeholder="Edad" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <input id="estatura" type="number" class="form-control" placeholder="Estatura (m)"
+                        aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <input id="peso" type="number" class="form-control" placeholder="Peso (kg)" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <button onclick="pregunta1()" type="button" class="btn btn-primary btn-lg" style="width: 100%;">
+                    <div class="row">
+                        <div class="col" style="text-align: left;">
+                            Continuar
                         </div>
-                    </button>
-                </a>
-                <br>
+                        <div class="col" style="text-align: right;">
+                            <i class="fas fa-hand-point-right"></i>
+                        </div>
+                    </div>
+                </button>
+                <!-- <br>
                 <br>
                 <a href="pregunta-2.html">
                     <button type="button" class="btn btn-primary btn-lg" style="width: 100%;">
@@ -112,7 +127,7 @@
                             </div>
                         </div>
                     </button>
-                </a>
+                </a> -->
                 <br>
                 <br>
             </div>
@@ -125,7 +140,8 @@
             </div>
         </div>
     </nav>
-    <script src="/js/script.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
