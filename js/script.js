@@ -1,22 +1,24 @@
+/* Validacion de politcas y correo electronico */
 function eleccionSi() {
-    if (!document.getElementById('checkbox1').checked) {
-        var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-        var alertTrigger = document.getElementById('eleccionsi')
-
-        function alert(message, type) {
-            var wrapper = document.createElement('div')
-            wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-danger" role="alert">' + message
-
-            alertPlaceholder.append(wrapper)
-        }
-
-        if (alertTrigger) {
-            alertTrigger.addEventListener('click', function () {
-                alert('Para continuar, acepta nuestros términos y políticas', 'success')
+    email = document.getElementById('email').value
+    re = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    if (email.length==0 || !re.exec(email)) {
+        console.log('hola')
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Por favor ingrese una direccion de correo electronico valida',
+            confirmButtonColor: '#2a6db3'
+        })
+        if (!document.getElementById('checkbox1').checked) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Para continuar, acepta nuestros términos y políticas',
+                confirmButtonColor: '#2a6db3'
             })
-        } 
-        
-    } else {
-        window.location="preguntas.html";
+        } else {
+            window.location = "preguntas.html";
+        }
     }
 }
