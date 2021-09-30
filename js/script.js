@@ -7,7 +7,7 @@ function eleccionSi() {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Para continuar, acepta nuestros términos y políticas',
+            text: 'Para continuar, acepta nuestros términos, políticas y seleccione la opcion SI',
             confirmButtonColor: '#2a6db3'
         })
     }else 
@@ -15,7 +15,7 @@ function eleccionSi() {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Por favor ingrese una direccion de correo electronico valida',
+            text: 'Por favor ingrese una direccion de correo electronico valida y seleccione la opcion SI',
             confirmButtonColor: '#2a6db3'
         })
     }else {
@@ -29,6 +29,7 @@ function pregunta1(){
     edad = document.getElementById('edad').value
     estatura = document.getElementById('estatura').value
     peso = document.getElementById('peso').value
+    progreso = document.getElementById('progreso2')
 
     valoresAceptados = /^[0-9]+$/;
 
@@ -36,10 +37,11 @@ function pregunta1(){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Por favor complete los campos y/o ingrese valores numericos',
+            text: 'Por favor complete los campos solicitados',
             confirmButtonColor: '#2a6db3'
         })
     }else {
+        progreso.style.width = '100%';
         window.location = "pregunta-2.html";
     }
 }
