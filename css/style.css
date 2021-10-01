@@ -51,9 +51,19 @@
     opacity: 0.8;
 }
 
+#eleccionsi {
+    background-color: #3ea91e;
+}
+
+#eleccionno {
+    background-color:  #a91e1e;
+}
+
 #eleccionsi, #eleccionno{
-    background-color: #2a6db3;
+    width: 100%;
     opacity: 0.8;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 991px){
@@ -83,6 +93,6 @@
     -moz-box-shadow: 0px 1px 5px 3px rgba(42,109,179,0.35);
 }
 
-.progress {
-    max-width: 100%;
+#progressbar1, #progressbar1 {
+    height: 10px;
 }

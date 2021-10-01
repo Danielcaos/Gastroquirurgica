@@ -29,7 +29,6 @@ function pregunta1(){
     edad = document.getElementById('edad').value
     estatura = document.getElementById('estatura').value
     peso = document.getElementById('peso').value
-    progreso = document.getElementById('progreso2')
 
     valoresAceptados = /^[0-9]+$/;
 
@@ -41,7 +40,17 @@ function pregunta1(){
             confirmButtonColor: '#2a6db3'
         })
     }else {
-        progreso.style.width = '100%';
         window.location = "pregunta-2.html";
     }
 }
+
+$( function() {
+    $( "#progressbar" ).progressbar({
+      value: 10
+    });
+    $( "#progressbar" ).animate({
+        backgroundColor: "#2a6db3",
+        height: 10
+      });
+} );
+

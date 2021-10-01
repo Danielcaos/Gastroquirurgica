@@ -2,10 +2,18 @@
 <html lang="es">
 
 <head>
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gastroquirurgica</title>
+
+    <!-- JQuery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +49,7 @@
                         class="fab fa-facebook-square fa-2x"></i></a>
                 <a href="https://www.instagram.com/gastroquirurgicasas/" target="_blanck"><i
                         class="fab fa-instagram-square fa-2x"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=3152732114, 3156785070, 3176679608" target="_blanck"><i
+                <a href="https://api.whatsapp.com/send?phone=3156785070" target="_blanck"><i
                         class="fab fa-whatsapp-square fa-2x"></i></a>
                 <a href="https://g.page/r/CWWd_FM0mzhhEAE" target="_blanck"><i
                         class="fab fa-google-plus-square fa-2x"></i></a>
@@ -51,17 +59,11 @@
     <div class="container">
         <div class="container" id="preguntas">
             <div class="row" style="padding-bottom: 7px;">
-                <div class="col">
+                <div>
                     <a id="regresar" href="index.html"><i class="fas fa-chevron-left"></i> Paso anterior</a>
                 </div>
-                <div class="col" style="text-align: right;">
-                    <p id="text">2/2</p>
-                </div>
             </div>
-            <div class="progress" style="height: 10px;">
-                <div id="progreso2" class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-            </div>
+            <div id="progressbar"></div>
             <div id="contenido-pregunta">
                 <br>
                 <h3>
