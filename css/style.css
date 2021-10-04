@@ -66,10 +66,25 @@
     font-weight: bold;
 }
 
+#p2-op1, #p2-op2, #p2-op3, #p2-op4, #checkbox1, #checkbox2 {
+    font-size: 20px;
+}
+
+.form-check-label {
+    font-size: 21px; 
+}
+
 @media only screen and (max-width: 991px){
     #preguntas, #respuesta {
         padding-left: 0;
         padding-right: 0; 
+    }
+    .form-check-label {
+        font-size: 15px; 
+    }
+    
+    #p2-op1, #p2-op2, #p2-op3, #p2-op4, #checkbox1, #checkbox2 {
+        font-size: 15px;
     }
 }
 
@@ -95,4 +110,4 @@
 
 #progressbar1, #progressbar1 {
     height: 10px;
-}
+} 

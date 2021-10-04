@@ -98,6 +98,16 @@
                     <option value="1">Masculino</option>
                     <option value="2">Femenino</option>
                 </select>
+                <div style="padding-bottom: 17px;"></div>
+                <select id="departamentos" class="form-select" aria-label="Default select example">
+                    <option selected>Departamento</option>
+                    <?php
+                        $query = $mysqli -> query ("SELECT * FROM paises");
+                        while ($valores = mysqli_fetch_array($query)) {
+                        echo '<option value="'.$valores[id].'">'.$valores[nombre].'</option>';
+                        }
+                    ?>
+                </select>
                 <div class="input-group mb-3" style="padding-top: 17px;">
                     <input id="edad" type="number" class="form-control" placeholder="Edad" aria-label="Username"
                         aria-describedby="basic-addon1">

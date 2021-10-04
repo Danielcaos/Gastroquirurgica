@@ -43,6 +43,7 @@ function pregunta1() {
     estatura = document.getElementById('estatura').value
     peso = document.getElementById('peso').value
     genero = document.getElementById('genero').value
+    departamentos = document.getElementById('departamentos').value
 
     if (genero == 'Genero') {
         Swal.fire({
@@ -52,14 +53,22 @@ function pregunta1() {
             confirmButtonColor: '#2a6db3'
         })
     } else
-        if (edad.length == 0 || estatura.length == 0 || peso.length == 0) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor complete los campos solicitados',
-                confirmButtonColor: '#2a6db3'
-            })
-        } else {
+    if(departamentos == 'Departamento'){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Por favor seleccione un departamento',
+            confirmButtonColor: '#2a6db3'
+        })
+    }else
+    if (edad.length == 0 || estatura.length == 0 || peso.length == 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Por favor complete los campos solicitados',
+            confirmButtonColor: '#2a6db3'
+        })
+    } else {
             progressNumber += progressNumber;
             var number = localStorage.getItem('progressNumber');
             localStorage.setItem('progressNumber', number);
