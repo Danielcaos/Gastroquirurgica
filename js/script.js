@@ -1,3 +1,11 @@
+var progressBar = $('.progreso2');
+var progressNumber = 10;
+
+$(document).ready(function () {
+    $(".progreso2").css("width", localStorage.getItem('progressNumber') + '%');
+    progressBar.attr('aria-valuenow', localStorage.getItem('progressNumber'));
+});
+
 /* Validacion de politcas y correo electronico */
 function eleccionSi() {
     email = document.getElementById('email').value
@@ -10,41 +18,46 @@ function eleccionSi() {
             text: 'Para continuar, acepta nuestros términos, políticas y seleccione la opcion SI',
             confirmButtonColor: '#2a6db3'
         })
-    }else 
-    if (email.length==0 || !re.exec(email)) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Por favor ingrese una direccion de correo electronico valida y seleccione la opcion SI',
-            confirmButtonColor: '#2a6db3'
-        })
-    }else {
+    } else
+        if (email.length == 0 || !re.exec(email)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Por favor ingrese una direccion de correo electronico valida y seleccione la opcion SI',
+                confirmButtonColor: '#2a6db3'
+            })
+        } else {
             window.location = "pregunta-1.html";
-    }
-    
+        }
+
 }
 
 /* Primera pregunta */
-function pregunta1(){
+function pregunta1() {
     edad = document.getElementById('edad').value
     estatura = document.getElementById('estatura').value
     peso = document.getElementById('peso').value
 
-    valoresAceptados = /^[0-9]+$/;
-
-    if(edad.length==0 || estatura.length==0 || peso.length==0){
+    if (edad.length == 0 || estatura.length == 0 || peso.length == 0) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Por favor complete los campos solicitados',
             confirmButtonColor: '#2a6db3'
         })
-    }else {
-        window.location = "pregunta-2.html";
+    } else {
+        progressNumber += progressNumber;
+        var number = localStorage.getItem('progressNumber');
+        localStorage.setItem('progressNumber', number);
+        console.log(number);
+        setInterval(function () {
+            window.location = "pregunta-2.html";
+            console.log(number);
+        }, 500)
     }
 }
 
-$( function() {
+/* $( function() {
     $( "#progressbar" ).progressbar({
       value: 10
     });
@@ -52,5 +65,6 @@ $( function() {
         backgroundColor: "#2a6db3",
         height: 10
       });
-} );
+} ); */
+
 
