@@ -1,8 +1,13 @@
+/* Manejo de la barra de progreso */
 var progressBar = $('.progreso2');
 var progressNumber = 10;
 
 $(document).ready(function () {
     $(".progreso2").css("width", localStorage.getItem('progressNumber') + '%');
+    progressBar.attr('aria-valuenow', localStorage.getItem('progressNumber'));
+});
+$(document).ready(function () {
+    $(".progreso3").css("width", localStorage.getItem('progressNumber') + '%');
     progressBar.attr('aria-valuenow', localStorage.getItem('progressNumber'));
 });
 
@@ -37,34 +42,68 @@ function pregunta1() {
     edad = document.getElementById('edad').value
     estatura = document.getElementById('estatura').value
     peso = document.getElementById('peso').value
+    genero = document.getElementById('genero').value
 
-    if (edad.length == 0 || estatura.length == 0 || peso.length == 0) {
+    if (genero == 'Genero') {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Por favor complete los campos solicitados',
+            text: 'Por favor seleccione un genero',
             confirmButtonColor: '#2a6db3'
         })
-    } else {
-        progressNumber += progressNumber;
-        var number = localStorage.getItem('progressNumber');
-        localStorage.setItem('progressNumber', number);
-        console.log(number);
-        setInterval(function () {
-            window.location = "pregunta-2.html";
+    } else
+        if (edad.length == 0 || estatura.length == 0 || peso.length == 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Por favor complete los campos solicitados',
+                confirmButtonColor: '#2a6db3'
+            })
+        } else {
+            progressNumber += progressNumber;
+            var number = localStorage.getItem('progressNumber');
+            localStorage.setItem('progressNumber', number);
             console.log(number);
-        }, 500)
-    }
+            setInterval(function () {
+                window.location = "pregunta-2.html";
+                console.log(number);
+            }, 500)
+        }
 }
 
-/* $( function() {
-    $( "#progressbar" ).progressbar({
-      value: 10
-    });
-    $( "#progressbar" ).animate({
-        backgroundColor: "#2a6db3",
-        height: 10
-      });
-} ); */
+/* Segunda pregunta */
+function pregunta2() {
+    respuesta1 = document.getElementById('p2-op1').checked
+    respuesta2 = document.getElementById('p2-op2').checked
+    respuesta3 = document.getElementById('p2-op3').checked
+    respuesta4 = document.getElementById('p2-op4').checked
+
+    if (!respuesta1 && !respuesta2 && !respuesta3 && !respuesta4) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Por favor seleccione una respuesta para continuar',
+            confirmButtonColor: '#2a6db3'
+        })
+    } else
+        if ((respuesta1 && respuesta2 && respuesta3 && respuesta4) || (respuesta1 && respuesta2) || (respuesta1 && respuesta3) || (respuesta1 && respuesta4) || (respuesta2 && respuesta3) || (respuesta2 && respuesta4) || (respuesta3 && respuesta4)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Por favor seleccione una sola respuesta',
+                confirmButtonColor: '#2a6db3'
+            })
+        }
+        else {
+            progressNumber += progressNumber;
+            var number = localStorage.getItem('progressNumber');
+            localStorage.setItem('progressNumber', number);
+            console.log(number);
+            setInterval(function () {
+                window.location = "pregunta-3.html";
+                console.log(number);
+            }, 500)
+        }
+}
 
 
