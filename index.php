@@ -1,4 +1,16 @@
-﻿<!DOCTYPE html>
+﻿<?
+
+require_once 'libs/controller.php';
+require_once 'libs/view.php';
+require_once 'libs/model.php';
+require_once 'libs/app.php';
+require_once 'config/config.php';
+
+$app = new App();
+
+?>
+
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -16,10 +28,10 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <!-- Icono Pestaña -->
-    <link rel="shortcut icon" href="resourse/img/pestania.png" />
+    <link rel="shortcut icon" href="public/resourse/img/pestania.png" />
 
     <!-- CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -37,7 +49,7 @@
     <nav class="navbar" id="menu">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
+                <img src="public/resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
             </a>
             <div id="redes">
                 <a href="https://unimeal.com/es/step-goal" target="_blanck"><i
@@ -59,7 +71,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="card mb-3">
-                    <img src="resourse/img/si.jpg" class="card-img-top" alt="...">
+                    <img src="public/resourse/img/si.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 id="text" class="card-title">Tema de interes para el usuario</h5>
                         <button id="eleccionsi" onclick="eleccionSi()" type="button" class="btn btn-primary">SI</button>
@@ -68,7 +80,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="card mb-3">
-                    <img src="resourse/img/no.jpg" class="card-img-top" alt="...">
+                    <img src="public/resourse/img/no.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 id="text" class="card-title">Tema de interes para el usuario</h5>
                         <a id="eleccionno" href="portafolio.html" class="btn btn-primary">NO</a>
@@ -108,7 +120,7 @@
             </div>
         </div>
     </nav>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="public/js/script.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 

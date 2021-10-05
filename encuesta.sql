@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-10-2021 a las 00:54:15
+-- Tiempo de generación: 06-10-2021 a las 00:43:28
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -29,11 +29,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `datos` (
+  `id` int(60) NOT NULL,
+  `correo` varchar(60) NOT NULL,
+  `genero` varchar(4) NOT NULL,
+  `departamento` varchar(60) NOT NULL,
   `edad` int(15) NOT NULL,
   `estatura` decimal(15,0) NOT NULL,
-  `peso` decimal(15,0) NOT NULL,
-  `correo` varchar(60) NOT NULL,
-  `id` int(60) NOT NULL
+  `peso` decimal(15,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -136,7 +138,8 @@ CREATE TABLE `resultado` (
 --
 
 CREATE TABLE `usuario` (
-  `correo` varchar(60) NOT NULL
+  `correo` varchar(60) NOT NULL,
+  `permiso` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

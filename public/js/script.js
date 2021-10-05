@@ -1,16 +1,3 @@
-/* Manejo de la barra de progreso */
-var progressBar = $('.progreso2');
-var progressNumber = 10;
-
-$(document).ready(function () {
-    $(".progreso2").css("width", localStorage.getItem('progressNumber') + '%');
-    progressBar.attr('aria-valuenow', localStorage.getItem('progressNumber'));
-});
-$(document).ready(function () {
-    $(".progreso3").css("width", localStorage.getItem('progressNumber') + '%');
-    progressBar.attr('aria-valuenow', localStorage.getItem('progressNumber'));
-});
-
 /* Validacion de politcas y correo electronico */
 function eleccionSi() {
     email = document.getElementById('email').value
@@ -32,7 +19,7 @@ function eleccionSi() {
                 confirmButtonColor: '#2a6db3'
             })
         } else {
-            window.location = "pregunta-1.html";
+            window.location = "pregunta-1.php";
         }
 
 }
@@ -74,7 +61,7 @@ function pregunta1() {
             localStorage.setItem('progressNumber', number);
             console.log(number);
             setInterval(function () {
-                window.location = "pregunta-2.html";
+                window.location.href = "pregunta-2.html";
                 console.log(number);
             }, 500)
         }
