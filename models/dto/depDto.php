@@ -15,7 +15,7 @@ public function getId(){
 }
 
 public function setId($id){
-    $this ->nombre = $id;
+    $this ->id = $id;
 }
 
 public function getNombre(){

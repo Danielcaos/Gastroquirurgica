@@ -25,15 +25,15 @@
         }
         
         public function setId($id){
-            $this ->nombre = $id;
+            $this ->id = $id;
         }
 
         public function getCorreo(){
-            return $this->Correo;
+            return $this->correo;
         }
         
-        public function setCorreo($Correo){
-            $this ->nombre = $Correo;
+        public function setCorreo($correo){
+            $this ->correo = $correo;
         }
 
         public function getGenero(){
@@ -41,7 +41,7 @@
         }
         
         public function setGenero($genero){
-            $this ->nombre = $genero;
+            $this ->genero = $genero;
         }
 
         public function getDep(){
@@ -49,7 +49,7 @@
         }
         
         public function setDep($departamento){
-            $this ->nombre = $departamento;
+            $this ->departamento = $departamento;
         }
 
         public function getEdad(){
@@ -57,7 +57,7 @@
         }
         
         public function setEdad($edad){
-            $this ->nombre = $edad;
+            $this ->edad = $edad;
         }
 
         public function getEstatura(){
@@ -65,7 +65,7 @@
         }
         
         public function setEstatura($estatura){
-            $this ->nombre = $estatura;
+            $this ->estatura = $estatura;
         }
 
         public function getPeso(){
@@ -73,7 +73,7 @@
         }
         
         public function setPeso($peso){
-            $this ->nombre = $peso;
+            $this ->peso = $peso;
         }
 
     }

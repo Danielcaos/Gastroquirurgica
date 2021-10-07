@@ -7,7 +7,7 @@
 
         public function __construct($correo, $permiso){
             $this->correo = $correo;
-            $this->nombre = $permiso;
+            $this->permiso = $permiso;
         }
         
         public function getCorreo(){
@@ -15,7 +15,7 @@
         }
         
         public function setCorreo($correo){
-            $this ->nombre = $correo;
+            $this ->correo = $correo;
         }
         
         public function getPermiso(){
@@ -23,7 +23,7 @@
         }
         
         public function setNombre($permiso){
-            $this ->nombre = $permiso;
+            $this ->permiso = $permiso;
         }
 
 

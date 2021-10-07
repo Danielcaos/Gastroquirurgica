@@ -40,6 +40,21 @@ class depDao extends Model{
 
     }
 
+    public function buscar($nombre){
+        try{
+            $statement = $this->db->connect()->prepare("SELECT * FROM departamentos WHERE (nombre = :nombre)");
+            $statement->execute(array(
+                ':nombre' => $nombre
+            ));
+            $resultado = $statement->fetch();
+            if(!empty($resultado)){
+                $resultado = new usuarioDto($resultado['id'], $resultado['nombre']);}
+            return  $resultado;
+        }catch(PDOException $e){
+            return null;
+        }
+    }
+
 }
 
 ?>
