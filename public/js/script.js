@@ -31,6 +31,8 @@ function pregunta1() {
     peso = document.getElementById('peso').value
     genero = document.getElementById('genero').value
     departamentos = document.getElementById('departamentos').value
+    doctor = document.getElementById('imc')
+    console.log('hola')
 
     if (genero == 'Genero') {
         Swal.fire({
@@ -40,14 +42,14 @@ function pregunta1() {
             confirmButtonColor: '#2a6db3'
         })
     } else
-    if(departamentos == 'Departamento'){
+    /* if(departamentos == 'Departamento'){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Por favor seleccione un departamento',
             confirmButtonColor: '#2a6db3'
         })
-    }else
+    }else */
     if (edad.length == 0 || estatura.length == 0 || peso.length == 0) {
         Swal.fire({
             icon: 'error',
@@ -56,12 +58,29 @@ function pregunta1() {
             confirmButtonColor: '#2a6db3'
         })
     } else {
-            progressNumber += progressNumber;
+            var imc = peso/(Math.pow(estatura,2));
+            console.log(imc);
+            if(imc<18,5){
+                doctor.src = "public/resourse/img/1.png"
+            }else
+            if(18,5<=imc && imc<=24,9){
+                doctor.src = "public/resourse/img/2.png"
+            }else
+            if(24,9<imc && imc<=29,9){
+                doctor.src = "public/resourse/img/3.png"
+            }else
+            if(29,9<imc && imc<=34,9){
+                doctor.src = "public/resourse/img/4.png"
+            }else
+            if(imc>=35){
+                doctor.src = "public/resourse/img/5.png"  
+            }
+            /* progressNumber += progressNumber;
             var number = localStorage.getItem('progressNumber');
             localStorage.setItem('progressNumber', number);
-            console.log(number);
+            console.log(number); */
             setInterval(function () {
-                window.location.href = "pregunta-2.html";
+                window.location.href = "pregunta-2.php";
                 console.log(number);
             }, 500)
         }
