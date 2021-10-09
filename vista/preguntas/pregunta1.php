@@ -21,10 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <!-- Icono Pestaña -->
-    <link rel="shortcut icon" href="public/resourse/img/pestania.png" />
+    <link rel="shortcut icon" href="<?php echo constant('URL')?>public/resourse/img/pestania.png" />
 
     <!-- CSS -->
-    <link href="public/css/style.css" rel="stylesheet">
+    <link href="<?php echo constant('URL')?>public/css/style.css" rel="stylesheet">
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -42,7 +42,7 @@
     <nav class="navbar" id="menu">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="public/resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
+                <img src="<?php echo constant('URL')?>public/resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
             </a>
             <div id="redes">
                 <a href="https://www.facebook.com/gastroquirurgicaIPS/" target="_blanck"><i
@@ -73,7 +73,7 @@
                 <br>
                 <div class="row">
                     <div class="col-sm-2" style="height: 323px;"><img id="doctor"
-                            style="height: 90%; padding-left: 25%;" src="public/resourse/img/doctor.png" class="img-fluid"
+                            style="height: 90%; padding-left: 25%;" src="<?php echo constant('URL')?>public/resourse/img/doctor.png" class="img-fluid"
                             alt="..."></div>
                     <div class="col-sm-10">
                         <p style="text-align: justify;" id="text">Lorem ipsum dolor sit amet consectetur adipisicing
@@ -101,9 +101,9 @@
                 <div style="padding-bottom: 17px;"></div>
                 <select id="departamentos" class="form-select" aria-label="Default select example">
                     <option selected>Departamento</option>
-                   
-
-
+                    <?php for($m=0;$m<count($this->datos);$m++)?>
+                    <option value="<?php echo rtrim($this->datos[$m]['id'],"")?>"><?php echo rtrim($this->datos[$m]['nombre'], "")?></option>
+                    
                 </select>
                 <div class="input-group mb-3" style="padding-top: 17px;">
                     <input id="edad" type="number" class="form-control" placeholder="Edad" aria-label="Username"
@@ -139,7 +139,7 @@
             </div>
         </div>
     </nav>
-    <script type="text/javascript" src="public/js/script.js"></script>
+    <script type="text/javascript" src="<?php echo constant('URL')?>public/js/script.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 

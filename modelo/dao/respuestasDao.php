@@ -1,6 +1,6 @@
 <?php
 
-require 'models/dto/respuestasDto.php';
+require 'modelo/dto/respuestasDto.php';
 
     class respuestasDao extends Model{
 

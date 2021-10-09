@@ -1,26 +1,37 @@
 <?php
 
-class depControl extends Controller{
+    require 'modelo/dao/depDao.php';
 
-    private $dep;
-        
+    class depControl extends Controller{
 
-        function __construct(){
-             parent::__construct();
-              //$dep=null;
+        function __construct()
+        {   
+            parent::__construct();
+            $this->view->datos = [];
         }
 
-        function render($ubicacion = null)
-        {
-            $constr = "director";
+        function render($ubicacion = null){
+
+            $constr = "preguntas";
+            $this->cargarDep();
             if (isset($ubicacion[0])) {
                 $this->view->render($constr, $ubicacion[0]);
             } else {
-                $this->view->render($constr, 'index');
+                $this->view->render($constr, 'pregunta1');
             }
+
+        }
+
+        function cargarDep(){
+
+            $this->view->datos = $this->model->listarDep();
+            
+
+
         }
 
 
-}
+
+    }
 
 ?>

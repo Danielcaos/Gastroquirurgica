@@ -1,4 +1,8 @@
 /* Validacion de politcas y correo electronico */
+
+const URLD = "http://localhost:80/AppWeb/";
+
+
 function eleccionSi() {
     email = document.getElementById('email').value
     re = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -19,7 +23,8 @@ function eleccionSi() {
                 confirmButtonColor: '#2a6db3'
             })
         } else {
-            window.location = "pregunta-1.php";
+            console.log("si");
+            window.location.href = URLD + "depControl/render/pregunta1";
         }
 
 }

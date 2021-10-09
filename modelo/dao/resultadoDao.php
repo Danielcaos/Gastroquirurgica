@@ -1,6 +1,6 @@
 <?php
 
-    require 'models/dto/resultadoDto.php';
+    require 'modelo/dto/resultadoDto.php';
 
     class resultadoDao extends Model{
 

@@ -1,6 +1,6 @@
 <?php
     
-require 'models/dto/usuarioDto.php';
+require 'modelo/dto/usuarioDto.php';
 
 class usuarioDao extends Model{
     

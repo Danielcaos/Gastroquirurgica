@@ -1,6 +1,6 @@
 <?php
 
-    require 'models/dto/datosDto.php';
+    require 'modelo/dto/datosDto.php';
 
     class datosDao extends Model{
 

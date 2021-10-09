@@ -1,6 +1,6 @@
 <?php
     
-require 'models/dto/depDto.php';
+require 'modelo/dto/depDto.php';
 
 class depDao extends Model{
     
@@ -10,12 +10,12 @@ class depDao extends Model{
        
     }
 
-    public function listar(){
+    public function listarDep(){
 
         try{
             $query = $this->db->connect()->prepare('SELECT * FROM departamentos');
             $query->execute();
-            $resultado = $query->fetch();
+            $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
             return $resultado;
         }catch(PDOException $e){
             return false;
