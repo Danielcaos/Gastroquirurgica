@@ -24,7 +24,7 @@ function eleccionSi() {
             })
         } else {
             console.log("si");
-            window.location.href = URLD + "depControl/render/pregunta1";
+            window.location.href = URLD + "preguntasControl/render/pregunta1";
         }
 
 }
@@ -36,7 +36,6 @@ function pregunta1() {
     peso = document.getElementById('peso').value
     genero = document.getElementById('genero').value
     departamentos = document.getElementById('departamentos').value
-    doctor = document.getElementById('imc')
     console.log('hola')
 
     if (genero == 'Genero') {
@@ -47,48 +46,46 @@ function pregunta1() {
             confirmButtonColor: '#2a6db3'
         })
     } else
-    /* if(departamentos == 'Departamento'){
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Por favor seleccione un departamento',
-            confirmButtonColor: '#2a6db3'
-        })
-    }else */
-    if (edad.length == 0 || estatura.length == 0 || peso.length == 0) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Por favor complete los campos solicitados',
-            confirmButtonColor: '#2a6db3'
-        })
-    } else {
-            var imc = peso/(Math.pow(estatura,2));
-            console.log(imc);
-            if(imc<18,5){
-                doctor.src = "public/resourse/img/1.png"
-            }else
-            if(18,5<=imc && imc<=24,9){
-                doctor.src = "public/resourse/img/2.png"
-            }else
-            if(24,9<imc && imc<=29,9){
-                doctor.src = "public/resourse/img/3.png"
-            }else
-            if(29,9<imc && imc<=34,9){
-                doctor.src = "public/resourse/img/4.png"
-            }else
-            if(imc>=35){
-                doctor.src = "public/resourse/img/5.png"  
+        if (departamentos == 'Departamento') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Por favor seleccione un departamento',
+                confirmButtonColor: '#2a6db3'
+            })
+        } else
+            if (edad.length == 0 || estatura.length == 0 || peso.length == 0) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Por favor complete los campos solicitados',
+                    confirmButtonColor: '#2a6db3'
+                })
+            }else{
+                loadPregunta2();
+                setTimeout(function () {
+                resultado = document.getElementById('imc');
+                var imc = peso/(Math.pow(estatura,2));
+                console.log(imc);
+                if (imc < 18,5) {
+                    resultado.src = URLD + "public/resourse/img/1.png";
+                } else
+                    if (18,5 <= imc && imc <= 24,9) {
+                        resultado.src = "public/resourse/img/2.png"
+                    } else
+                        if (24,9 < imc && imc <= 29,9) {
+                            resultado.src = "public/resourse/img/3.png"
+                        } else
+                            if (29,9 < imc && imc <= 34,9) {
+                                resultado.src = "public/resourse/img/4.png"
+                            } else
+                                if (imc >= 35) {
+                                    resultado.src = "public/resourse/img/5.png"
+                                }
+                                
+                }, 100)
+                
             }
-            /* progressNumber += progressNumber;
-            var number = localStorage.getItem('progressNumber');
-            localStorage.setItem('progressNumber', number);
-            console.log(number); */
-            setInterval(function () {
-                window.location.href = "pregunta-2.php";
-                console.log(number);
-            }, 500)
-        }
 }
 
 /* Segunda pregunta */
@@ -126,4 +123,76 @@ function pregunta2() {
         }
 }
 
+function httpRequest(url, callback) {
+    const http = new XMLHttpRequest();
+    http.open("GET", url);
+    http.send();
+    http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            callback.apply(http);
+        }
+    }
+}
 
+function loadPregunta2() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("asincrono").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET",URLD + "vista/preguntas/pregunta2.php", true);
+    xhttp.send();
+    return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  else {
+                console.log(imc);
+                if (imc < 18, 5) {
+                    doctor.src = "public/resourse/img/1.png"
+                } else
+                    if (18, 5 <= imc && imc <= 24, 9) {
+                        doctor.src = "public/resourse/img/2.png"
+                    } else
+                        if (24, 9 < imc && imc <= 29, 9) {
+                            doctor.src = "public/resourse/img/3.png"
+                        } else
+                            if (29, 9 < imc && imc <= 34, 9) {
+                                doctor.src = "public/resourse/img/4.png"
+                            } else
+                                if (imc >= 35) {
+                                    doctor.src = "public/resourse/img/5.png"
+                                }
+                progressNumber += progressNumber;
+                var number = localStorage.getItem('progressNumber');
+                localStorage.setItem('progressNumber', number);
+                console.log(number);
+                setInterval(function () {
+                    httpRequest(URLD + "preguntasControl/imc/" + peso + "/" + estatura, function () {
+
+                    });
+                }, 500)
+            } */

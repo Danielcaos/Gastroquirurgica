@@ -22,13 +22,6 @@
 
         }
 
-        function cargarDep(){
-
-            $this->view->datos = $this->model->listarDep();
-            
-
-
-        }
 
 
 

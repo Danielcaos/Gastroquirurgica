@@ -39,99 +39,101 @@
 </head>
 
 <body style="background-color:   #f7f7f7 ;">
-    <nav class="navbar" id="menu">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="<?php echo constant('URL')?>public/resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
-            </a>
-            <div id="redes">
-                <a href="https://www.facebook.com/gastroquirurgicaIPS/" target="_blanck"><i
-                        class="fab fa-facebook-square fa-2x"></i></a>
-                <a href="https://www.instagram.com/gastroquirurgicasas/" target="_blanck"><i
-                        class="fab fa-instagram-square fa-2x"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=3156785070" target="_blanck"><i
-                        class="fab fa-whatsapp-square fa-2x"></i></a>
-                <a href="https://g.page/r/CWWd_FM0mzhhEAE" target="_blanck"><i
-                        class="fab fa-google-plus-square fa-2x"></i></a>
-            </div>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="container" id="preguntas">
-            <div class="row" style="padding-bottom: 7px;">
-                <div>
-                    <a id="regresar" href="index.html"><i class="fas fa-chevron-left"></i> Paso anterior</a>
+    
+        <nav class="navbar" id="menu">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="<?php echo constant('URL')?>public/resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
+                </a>
+                <div id="redes">
+                    <a href="https://www.facebook.com/gastroquirurgicaIPS/" target="_blanck"><i
+                            class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href="https://www.instagram.com/gastroquirurgicasas/" target="_blanck"><i
+                            class="fab fa-instagram-square fa-2x"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=3156785070" target="_blanck"><i
+                            class="fab fa-whatsapp-square fa-2x"></i></a>
+                    <a href="https://g.page/r/CWWd_FM0mzhhEAE" target="_blanck"><i
+                            class="fab fa-google-plus-square fa-2x"></i></a>
                 </div>
             </div>
-            <!-- <div id="progressbar"></div> -->
-            <div class="progress" style="height: 5px;">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progreso1" role="progressbar"
-                    style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div id="contenido-pregunta">
-                <h3>Pregunta</h3>
-                <br>
-                <div class="row">
-                    <div class="col-sm-2" style="height: 323px;"><img id="doctor"
-                            style="height: 90%; padding-left: 25%;" src="<?php echo constant('URL')?>public/resourse/img/doctor.png" class="img-fluid"
-                            alt="..."></div>
-                    <div class="col-sm-10">
-                        <p style="text-align: justify;" id="text">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit.
-                            Architecto tempora
-                            voluptate ipsam reprehenderit. Perspiciatis animi velit enim repellendus alias aspernatur
-                            nostrum magnam debitis blanditiis, fugit dolorem sit, sequi recusandae iste! Lorem ipsum,
-                            dolor
-                            sit amet consectetur adipisicing elit. Repellat reiciendis debitis aliquam sunt fuga
-                            inventore
-                            laborum dolor optio porro nostrum quo, adipisci dignissimos perferendis soluta quam, autem
-                            illum. Nam, ipsum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                            blanditiis
-                            voluptates aperiam quod a ut repellendus nostrum, tenetur, enim alias sapiente, at non
-                            architecto. Perferendis veniam cum possimus vel quibusdam.</p>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <select id="genero" class="form-select" aria-label="Default select example">
-                    <option selected>Genero</option>
-                    <option value="1">Masculino</option>
-                    <option value="2">Femenino</option>
-                </select>
-                <div style="padding-bottom: 17px;"></div>
-                <select id="departamentos" class="form-select" aria-label="Default select example">
-                    <option selected>Departamento</option>
-                    <?php for($m=0;$m<count($this->datos);$m++)?>
-                    <option value="<?php echo rtrim($this->datos[$m]['id'],"")?>"><?php echo rtrim($this->datos[$m]['nombre'], "")?></option>
-                    
-                </select>
-                <div class="input-group mb-3" style="padding-top: 17px;">
-                    <input id="edad" type="number" class="form-control" placeholder="Edad" aria-label="Username"
-                        aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <input id="estatura" type="number" class="form-control" placeholder="Estatura (m)"
-                        aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <input id="peso" type="number" class="form-control" placeholder="Peso (kg)" aria-label="Username"
-                        aria-describedby="basic-addon1">
-                </div>
-                <button onclick="pregunta1()" type="button" class="btn btn-primary btn-lg" style="width: 100%;">
-                    <div class="row">
-                        <div class="col" style="text-align: left;">
-                            Continuar
-                        </div>
-                        <div class="col" style="text-align: right;">
-                            <i class="fas fa-hand-point-right"></i>
+        </nav>
+        <div id="asincrono">
+            <div class="container">
+                <div class="container" id="preguntas">
+                    <div class="row" style="padding-bottom: 7px;">
+                        <div>
+                            <a id="regresar" href="index.html"><i class="fas fa-chevron-left"></i> Paso anterior</a>
                         </div>
                     </div>
-                </button>
-                <br>
-                <br>
+                    <div class="progress" style="height: 5px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated progreso1" role="progressbar"
+                            style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div id="contenido-pregunta">
+                        <h3>Pregunta</h3>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2" style="height: 323px;"><img id="doctor"
+                                    style="height: 90%; padding-left: 25%;" src="<?php echo constant('URL')?>public/resourse/img/doctor.png" class="img-fluid"
+                                    alt="..."></div>
+                            <div class="col-sm-10">
+                                <p style="text-align: justify;" id="text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Architecto tempora
+                                    voluptate ipsam reprehenderit. Perspiciatis animi velit enim repellendus alias aspernatur
+                                    nostrum magnam debitis blanditiis, fugit dolorem sit, sequi recusandae iste! Lorem ipsum,
+                                    dolor
+                                    sit amet consectetur adipisicing elit. Repellat reiciendis debitis aliquam sunt fuga
+                                    inventore
+                                    laborum dolor optio porro nostrum quo, adipisci dignissimos perferendis soluta quam, autem
+                                    illum. Nam, ipsum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                                    blanditiis
+                                    voluptates aperiam quod a ut repellendus nostrum, tenetur, enim alias sapiente, at non
+                                    architecto. Perferendis veniam cum possimus vel quibusdam.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <select id="genero" class="form-select" aria-label="Default select example">
+                            <option selected>Genero</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                        </select>
+                        <div style="padding-bottom: 17px;"></div>
+                        <select id="departamentos" class="form-select" aria-label="Default select example">
+                            <option selected>Departamento</option>
+                            <?php for ($m = 0; $m < count($this->datos); $m++) : ?>
+                                <option value="<?php echo rtrim($this->datos[$m]['id'],"")?>"><?php echo rtrim($this->datos[$m]['nombre'], "")?></option>
+                            <?php endfor; ?>
+                        </select>
+                        <div class="input-group mb-3" style="padding-top: 17px;">
+                            <input id="edad" type="number" class="form-control" placeholder="Edad" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input id="estatura" type="number" class="form-control" placeholder="Estatura (m)"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input id="peso" type="number" class="form-control" placeholder="Peso (kg)" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <button onclick="return pregunta1()" type="button" class="btn btn-primary btn-lg" style="width: 100%;">
+                            <div class="row">
+                                <div class="col" style="text-align: left;">
+                                    Continuar
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <i class="fas fa-hand-point-right"></i>
+                                </div>
+                            </div>
+                        </button>
+                        <br>
+                        <br>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     <nav class="navbar navbar-light bg-light">
         <div class="container">
             <div style="margin: 0 auto;">

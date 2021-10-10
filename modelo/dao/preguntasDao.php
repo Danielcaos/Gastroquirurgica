@@ -9,6 +9,20 @@
             parent::__construct();
         }
 
+        public function listarDep(){
+
+            try{
+                $query = $this->db->connect()->prepare('SELECT * FROM departamentos');
+                $query->execute();
+                $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+                return $resultado;
+            }catch(PDOException $e){
+                return false;
+            }
+    
+        }
+    
+
         public function listar(){
 
             try{
