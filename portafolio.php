@@ -16,10 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <!-- Icono Pestaña -->
-    <link rel="shortcut icon" href="resourse/img/pestaniaa.png" />
+    <link rel="shortcut icon" href="public/resourse/img/pestania.png" />
 
     <!-- CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -37,7 +37,7 @@
     <nav class="navbar" id="menu">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
+                <img src="public/resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
             </a>
             <div id="redes">
                 <a href="https://www.facebook.com/gastroquirurgicaIPS/" target="_blanck"><i
@@ -58,7 +58,7 @@
         </h4>
         <br>
         <div class="row">
-            <div class="col-sm-5"><img id="img-portafolio" src="resourse/img/IMG_3303.jpg" class="img-fluid" alt="...">
+            <div class="col-sm-5"><img id="img-portafolio" src="public/resourse/img/IMG_3303.jpg" class="img-fluid" alt="...">
             </div>
             <div class="col-sm-7" id="lista-portafolio">
                 <p style="font-weight: bold;" id="text">SERVICIOS DE CONSULTA EXTERNA</p>
@@ -74,7 +74,7 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-sm-5"><img id="img-portafolio" src="resourse/img/IMG_8840.jpg" class="img-fluid" alt="...">
+            <div class="col-sm-5"><img id="img-portafolio" src="public/resourse/img/IMG_8840.jpg" class="img-fluid" alt="...">
             </div>
             <div class="col-sm-7" id="lista-portafolio">
                 <p style="font-weight: bold;" id="text">SERVICIOS DE CIRUGíA</p>
@@ -89,7 +89,7 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-sm-5"><img id="img-portafolio" src="resourse/img/IMG_8023e.jpg" class="img-fluid" alt="...">
+            <div class="col-sm-5"><img id="img-portafolio" src="public/resourse/img/IMG_8023e.jpg" class="img-fluid" alt="...">
             </div>
             <div class="col-sm-7" id="lista-portafolio">
                 <p style="font-weight: bold;" id="text">SERVICIOS DE APOYO DIAGNOSTICO Y COMPLEMENTACIÓN TERAPÉUTICA
@@ -105,7 +105,7 @@
         <br>
         <div style="text-align: center;">
             <a class="btn btn-primary" id="eleccion"
-                href="resourse/documentos/PORTAFOLIO DE SERVICIOS GASTROQUIRURGICA 2019-FINAL.pdf"
+                href="public/resourse/documentos/PORTAFOLIO DE SERVICIOS GASTROQUIRURGICA 2019-FINAL.pdf"
                 download="Clinica Gastroquirurgica">DESCARGA NUESTRO PORTAFOLIO <i class="fas fa-file-download"></i></a>
         </div>
         <br>

@@ -31,11 +31,11 @@ function eleccionSi() {
 
 /* Primera pregunta */
 function pregunta1() {
-    edad = document.getElementById('edad').value
-    estatura = document.getElementById('estatura').value
-    peso = document.getElementById('peso').value
-    genero = document.getElementById('genero').value
-    departamentos = document.getElementById('departamentos').value
+    edad = document.getElementById('edad').value;
+    estatura = document.getElementById('estatura').value;
+    peso = document.getElementById('peso').value;
+    genero = document.getElementById('genero').value;
+    departamentos = document.getElementById('departamentos').value;
     console.log('hola')
 
     if (genero == 'Genero') {
@@ -64,25 +64,26 @@ function pregunta1() {
             }else{
                 loadPregunta2();
                 setTimeout(function () {
+                console.log(estatura);
+                console.log(peso);
                 resultado = document.getElementById('imc');
                 var imc = peso/(Math.pow(estatura,2));
                 console.log(imc);
-                if (imc < 18,5) {
+                if (imc < 18.5) {
                     resultado.src = URLD + "public/resourse/img/1.png";
                 } else
-                    if (18,5 <= imc && imc <= 24,9) {
-                        resultado.src = "public/resourse/img/2.png"
-                    } else
-                        if (24,9 < imc && imc <= 29,9) {
-                            resultado.src = "public/resourse/img/3.png"
-                        } else
-                            if (29,9 < imc && imc <= 34,9) {
-                                resultado.src = "public/resourse/img/4.png"
-                            } else
-                                if (imc >= 35) {
-                                    resultado.src = "public/resourse/img/5.png"
-                                }
-                                
+                if (18.5 <= imc && imc <= 24.9) {
+                    resultado.src = URLD +  "public/resourse/img/2.png";
+                } else
+                if (24.9 < imc && imc <= 29.9) {
+                    resultado.src = URLD +  "public/resourse/img/3.png";
+                } else
+                if (29.9 < imc && imc <= 34.9) {
+                    resultado.src = URLD +  "public/resourse/img/4.png";
+                } else
+                if (imc >= 35) {
+                    resultado.src = URLD +  "public/resourse/img/5.png";
+                }    
                 }, 100)
                 
             }
@@ -134,6 +135,7 @@ function httpRequest(url, callback) {
     }
 }
 
+/* Cargar pregunta N°2 */
 function loadPregunta2() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -146,53 +148,21 @@ function loadPregunta2() {
     return false;
 }
 
+/* Regreso a la pregunta N°1 */
 
+function retornoPregunta1() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("asincrono").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET",URLD + "vista/preguntas/pregunta1.php", true);
+    xhttp.send();
+    return false;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  else {
-                console.log(imc);
-                if (imc < 18, 5) {
-                    doctor.src = "public/resourse/img/1.png"
-                } else
-                    if (18, 5 <= imc && imc <= 24, 9) {
-                        doctor.src = "public/resourse/img/2.png"
-                    } else
-                        if (24, 9 < imc && imc <= 29, 9) {
-                            doctor.src = "public/resourse/img/3.png"
-                        } else
-                            if (29, 9 < imc && imc <= 34, 9) {
-                                doctor.src = "public/resourse/img/4.png"
-                            } else
-                                if (imc >= 35) {
-                                    doctor.src = "public/resourse/img/5.png"
-                                }
-                progressNumber += progressNumber;
-                var number = localStorage.getItem('progressNumber');
-                localStorage.setItem('progressNumber', number);
-                console.log(number);
-                setInterval(function () {
-                    httpRequest(URLD + "preguntasControl/imc/" + peso + "/" + estatura, function () {
-
-                    });
-                }, 500)
-            } */
+/* Regreso al index */
+function retornoIndex() {
+    window.location.href = "index.php";
+}

@@ -62,7 +62,7 @@
                 <div class="container" id="preguntas">
                     <div class="row" style="padding-bottom: 7px;">
                         <div>
-                            <a id="regresar" href="index.html"><i class="fas fa-chevron-left"></i> Paso anterior</a>
+                            <a id="regresar" href="<?php echo constant('URL')?>index.php"><i class="fas fa-chevron-left"></i> Paso anterior</a>
                         </div>
                     </div>
                     <div class="progress" style="height: 5px;">
@@ -73,10 +73,10 @@
                         <h3>Pregunta</h3>
                         <br>
                         <div class="row">
-                            <div class="col-sm-2" style="height: 323px;"><img id="doctor"
-                                    style="height: 90%; padding-left: 25%;" src="<?php echo constant('URL')?>public/resourse/img/doctor.png" class="img-fluid"
+                            <div class="col-sm-4" style="height: 323px;"><img id="doctor"
+                                    src="<?php echo constant('URL')?>public/resourse/img/doctor.png" class="img-fluid"
                                     alt="..."></div>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <p style="text-align: justify;" id="text">Lorem ipsum dolor sit amet consectetur adipisicing
                                     elit.
                                     Architecto tempora
@@ -92,8 +92,6 @@
                                     architecto. Perferendis veniam cum possimus vel quibusdam.</p>
                             </div>
                         </div>
-                        <br>
-                        <br>
                         <select id="genero" class="form-select" aria-label="Default select example">
                             <option selected>Genero</option>
                             <option value="1">Masculino</option>

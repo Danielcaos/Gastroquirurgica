@@ -111,3 +111,7 @@
 #progressbar1, #progressbar1 {
     height: 10px;
 } 
+
+#doctor, #imc {
+    border-radius: 5px;
+}
