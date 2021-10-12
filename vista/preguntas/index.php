@@ -34,7 +34,7 @@
     <nav class="navbar" id="menu">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="<?php header('http://localhost/AppWeb/') ?>" alt="" width="200" class="img-fluid">
+                <img src="<?php echo constant('URL') ?>public/resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
             </a>
             <div id="redes">
                 <a href="https://unimeal.com/es/step-goal" target="_blanck"><i class="fab fa-facebook-square fa-2x"></i></a>

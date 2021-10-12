@@ -84,7 +84,7 @@ function pregunta1() {
                 if (imc >= 35) {
                     resultado.src = URLD +  "public/resourse/img/5.png";
                 }    
-                }, 100)
+                }, 200)
                 
             }
 }
@@ -113,15 +113,13 @@ function pregunta2() {
             })
         }
         else {
-            progressNumber += progressNumber;
-            var number = localStorage.getItem('progressNumber');
-            localStorage.setItem('progressNumber', number);
-            console.log(number);
-            setInterval(function () {
-                window.location = "pregunta-3.html";
-                console.log(number);
-            }, 500)
+            loadPregunta3();
         }
+}
+
+/* Finalizar */
+function finalizar(){
+    window.location.href = URLD + "preguntasControl/render/respuesta";
 }
 
 function httpRequest(url, callback) {
@@ -134,6 +132,7 @@ function httpRequest(url, callback) {
         }
     }
 }
+
 
 /* Cargar pregunta N°2 */
 function loadPregunta2() {
@@ -149,7 +148,6 @@ function loadPregunta2() {
 }
 
 /* Regreso a la pregunta N°1 */
-
 function retornoPregunta1() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -162,7 +160,28 @@ function retornoPregunta1() {
     return false;
 }
 
-/* Regreso al index */
-function retornoIndex() {
-    window.location.href = "index.php";
+/* Cargar pregunta N°3 */
+function loadPregunta3() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("asincrono").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET",URLD + "vista/preguntas/pregunta3.php", true);
+    xhttp.send();
+    return false;
+}
+
+/* Regreso a la pregunta N°2 */
+function retornoPregunta2() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("asincrono").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET",URLD + "vista/preguntas/pregunta2.php", true);
+    xhttp.send();
+    return false;
 }

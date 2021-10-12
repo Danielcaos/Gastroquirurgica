@@ -16,10 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <!-- Icono Pestaña -->
-    <link rel="shortcut icon" href="./resourse/img/pestania.png" />
+    <link rel="shortcut icon" href="<?php echo constant('URL')?>public/resourse/img/pestania.png" />
 
     <!-- CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="<?php echo constant('URL')?>public/css/style.css" rel="stylesheet">
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -36,8 +36,8 @@
 <body style="background-color:   #f7f7f7 ;">
     <nav class="navbar" id="menu">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="./resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
+            <a class="navbar-brand" href="">
+                <img src="<?php echo constant('URL')?>public/resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
             </a>
             <div id="redes">
                 <a href="https://www.facebook.com/gastroquirurgicaIPS/" target="_blanck"><i
@@ -69,13 +69,13 @@
                     </div>
                     <div class="carousel-inner" id="carrusel">
                         <div class="carousel-item active">
-                            <img src="./resourse/img/respuesta1.jpg" class="d-block w-100" alt="...">
+                            <img src="<?php echo constant('URL')?>public/resourse/img/respuesta1.png" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./resourse/img/respuesta2.jpg" class="d-block w-100" alt="...">
+                            <img src="<?php echo constant('URL')?>public/resourse/img/respuesta2.png" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./resourse/img/respuesta3.jpg" class="d-block w-100" alt="...">
+                            <img src="<?php echo constant('URL')?>public/resourse/img/respuesta3.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -109,7 +109,7 @@
             </div>
         </div>
     </nav>
-    <script src="/js/script.js"></script>
+    <script src="<?php echo constant('URL')?>public/js/script.js"></script>
 </body>
 
 </html>
