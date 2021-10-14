@@ -36,6 +36,8 @@
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body style="background-color:   #f7f7f7 ;">
@@ -141,6 +143,9 @@
     </nav>
     <script type="text/javascript" src="<?php echo constant('URL')?>public/js/script.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script language="JavaScript">
+        history.forward()
+    </script>
 </body>
 
 </html>

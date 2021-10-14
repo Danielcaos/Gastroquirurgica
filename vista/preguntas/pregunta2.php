@@ -3,7 +3,7 @@
         <div class="container" id="preguntas">
             <div class="row" style="padding-bottom: 7px;">
                 <div>
-                    <a id="regresar" onclick="retornoPregunta1()" href=""><i class="fas fa-chevron-left"></i> Paso anterior</a>
+                    <a id="regresar1" onclick="retornoPregunta1()" href=""><i class="fas fa-chevron-left"></i> Paso anterior</a>
                 </div>
             </div>
             <div class="progress" style="height: 5px;">
@@ -66,4 +66,4 @@
             </div>
         </div>
     </div>
-</div>    
+</div>

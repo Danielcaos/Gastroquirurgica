@@ -1,8 +1,8 @@
-/* Validacion de politcas y correo electronico */
-
 const URLD = "http://localhost:80/AppWeb/";
 
+let rutas = [];
 
+/* Validacion de politcas y correo electronico */
 function eleccionSi() {
     email = document.getElementById('email').value
     re = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -31,6 +31,7 @@ function eleccionSi() {
 
 /* Primera pregunta */
 function pregunta1() {
+    rutas.push(URLD + "preguntasControl/render/pregunta1");
     edad = document.getElementById('edad').value;
     estatura = document.getElementById('estatura').value;
     peso = document.getElementById('peso').value;
@@ -142,6 +143,7 @@ function loadPregunta2() {
         document.getElementById("asincrono").innerHTML = this.responseText;
       }
     };
+    rutas.push(URLD + "vista/preguntas/pregunta2.php");
     xhttp.open("GET",URLD + "vista/preguntas/pregunta2.php", true);
     xhttp.send();
     return false;
@@ -149,15 +151,9 @@ function loadPregunta2() {
 
 /* Regreso a la pregunta N°1 */
 function retornoPregunta1() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("asincrono").innerHTML = this.responseText;
-      }
-    };
-    xhttp.open("GET",URLD + "vista/preguntas/pregunta1.php", true);
-    xhttp.send();
-    return false;
+    $("#regresar1").click(function () {
+        $("#asincrono").load(URLD + "vista/preguntas/pregunta1.php");
+    });
 }
 
 /* Cargar pregunta N°3 */
@@ -168,6 +164,7 @@ function loadPregunta3() {
         document.getElementById("asincrono").innerHTML = this.responseText;
       }
     };
+    rutas.push(URLD + "vista/preguntas/pregunta3.php");
     xhttp.open("GET",URLD + "vista/preguntas/pregunta3.php", true);
     xhttp.send();
     return false;
@@ -175,13 +172,19 @@ function loadPregunta3() {
 
 /* Regreso a la pregunta N°2 */
 function retornoPregunta2() {
+    $("#regresar2").click(function () {
+        $("#asincrono").load(URLD + "vista/preguntas/pregunta2.php");
+    });
+}
+
+function retornoGnerico(url){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("asincrono").innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET",URLD + "vista/preguntas/pregunta2.php", true);
+    xhttp.open("GET", url, true);
     xhttp.send();
-    return false;
+    return false; 
 }
