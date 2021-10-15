@@ -1,19 +1,16 @@
 <div id="asincrono">
     <div class="container">
         <div class="container" id="preguntas">
-            <div class="row" style="padding-bottom: 7px;">
-                <div>
-                    <a id="regresar1" onclick="retornoPregunta1()" href=""><i class="fas fa-chevron-left"></i> Paso anterior</a>
-                </div>
-            </div>
             <div class="progress" style="height: 5px;">
                 <div class="progress-bar progress-bar-striped progress-bar-animated progreso2" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <div id="contenido-pregunta">
                 <br>
-                <h3>
-                    Describe un dia comun para ti
-                </h3>
+                <div id="encabezado">
+                    <h3>
+                        Describe un dia comun para ti
+                    </h3>
+                </div>
                 <br>
                 <div class="row">
                     <div class="col-sm-4"><img id="imc" src="" class="img-fluid" alt="..."></div>

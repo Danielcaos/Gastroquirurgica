@@ -188,3 +188,12 @@ function retornoGnerico(url){
     xhttp.send();
     return false; 
 }
+
+function advertencia(){
+    Swal.fire({
+        icon: 'warning',
+        title: 'Recuerda...',
+        text: 'Una vez continues no podras cambiar tus respuestas',
+        confirmButtonColor: '#2a6db3'
+    })
+}

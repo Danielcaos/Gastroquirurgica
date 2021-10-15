@@ -40,8 +40,7 @@
 
 </head>
 
-<body style="background-color:   #f7f7f7 ;">
-    
+<body onload="advertencia()" style="background-color:   #f7f7f7 ;">
         <nav class="navbar" id="menu">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
@@ -62,17 +61,17 @@
         <div id="asincrono">
             <div class="container">
                 <div class="container" id="preguntas">
-                    <div class="row" style="padding-bottom: 7px;">
-                        <div>
-                            <a id="regresar" href="<?php echo constant('URL')?>index.php"><i class="fas fa-chevron-left"></i> Paso anterior</a>
-                        </div>
-                    </div>
                     <div class="progress" style="height: 5px;">
                         <div class="progress-bar progress-bar-striped progress-bar-animated progreso1" role="progressbar"
                             style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div id="contenido-pregunta">
-                        <h3>Pregunta</h3>
+                    <br>
+                    <div id="encabezado">
+                    <h3>
+                        Describe un dia comun para ti
+                    </h3>
+                </div>
                         <br>
                         <div class="row">
                             <div class="col-sm-4" style="height: 323px;"><img id="doctor"
@@ -143,8 +142,10 @@
     </nav>
     <script type="text/javascript" src="<?php echo constant('URL')?>public/js/script.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script language="JavaScript">
-        history.forward()
+    <script type="text/javascript">
+        window.onbeforeunload = function() {
+            return "¿Estás seguro que deseas salir de la página actual?"
+        }
     </script>
 </body>
 

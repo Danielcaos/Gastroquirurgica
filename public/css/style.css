@@ -115,3 +115,7 @@
 #doctor, #imc {
     border-radius: 5px;
 }
+
+#encabezado {
+    text-align: center;
+}
