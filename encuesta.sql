@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-10-2021 a las 00:43:28
+-- Tiempo de generación: 16-10-2021 a las 17:11:10
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -90,45 +90,13 @@ INSERT INTO `departamentos` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `preguntas`
---
-
-CREATE TABLE `preguntas` (
-  `id` int(11) NOT NULL,
-  `pregunta` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `respuestas_usuario`
---
-
-CREATE TABLE `respuestas_usuario` (
-  `id` int(11) NOT NULL,
-  `correo` varchar(60) NOT NULL,
-  `pregunta1` varchar(60) NOT NULL,
-  `pregunta2` varchar(60) NOT NULL,
-  `pregunta3` varchar(60) NOT NULL,
-  `pregunta4` varchar(60) NOT NULL,
-  `pregunta5` varchar(60) NOT NULL,
-  `pregunta6` varchar(60) NOT NULL,
-  `pregunta7` varchar(60) NOT NULL,
-  `pregunta8` varchar(60) NOT NULL,
-  `pregunta9` varchar(60) NOT NULL,
-  `pregunta10` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `resultado`
 --
 
 CREATE TABLE `resultado` (
   `id` int(11) NOT NULL,
-  `resultado` varchar(80) NOT NULL,
-  `email` varchar(60) NOT NULL
+  `correo` varchar(60) NOT NULL,
+  `resultado` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -160,24 +128,11 @@ ALTER TABLE `departamentos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `preguntas`
---
-ALTER TABLE `preguntas`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `respuestas_usuario`
---
-ALTER TABLE `respuestas_usuario`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_usuariorespuesta` (`correo`);
-
---
 -- Indices de la tabla `resultado`
 --
 ALTER TABLE `resultado`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_resultadousuario` (`email`);
+  ADD KEY `fk_resultadousuario` (`correo`);
 
 --
 -- Indices de la tabla `usuario`
@@ -202,18 +157,6 @@ ALTER TABLE `departamentos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT de la tabla `preguntas`
---
-ALTER TABLE `preguntas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `respuestas_usuario`
---
-ALTER TABLE `respuestas_usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `resultado`
 --
 ALTER TABLE `resultado`
@@ -230,16 +173,10 @@ ALTER TABLE `datos`
   ADD CONSTRAINT `fk_correo` FOREIGN KEY (`correo`) REFERENCES `usuario` (`correo`);
 
 --
--- Filtros para la tabla `respuestas_usuario`
---
-ALTER TABLE `respuestas_usuario`
-  ADD CONSTRAINT `fk_usuariorespuesta` FOREIGN KEY (`correo`) REFERENCES `usuario` (`correo`);
-
---
 -- Filtros para la tabla `resultado`
 --
 ALTER TABLE `resultado`
-  ADD CONSTRAINT `fk_resultadousuario` FOREIGN KEY (`email`) REFERENCES `usuario` (`correo`);
+  ADD CONSTRAINT `fk_resultadousuario` FOREIGN KEY (`correo`) REFERENCES `usuario` (`correo`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

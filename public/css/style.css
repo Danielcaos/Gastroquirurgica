@@ -37,7 +37,7 @@
     margin: 0 auto;
 }
 
-#deseo, #introduccion {
+#deseo, #introduccion, #encabezado {
     background-color: #2a6db3;
     padding-bottom: 3px;
     color: white;
@@ -114,8 +114,4 @@
 
 #doctor, #imc {
     border-radius: 5px;
-}
-
-#encabezado {
-    text-align: center;
 }

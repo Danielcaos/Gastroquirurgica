@@ -37,7 +37,7 @@
                 <img src="<?php echo constant('URL') ?>public/resourse/img/horizontal.png" alt="" width="200" class="img-fluid">
             </a>
             <div id="redes">
-                <a href="https://unimeal.com/es/step-goal" target="_blanck"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://www.facebook.com/gastroquirurgicaIPS/" target="_blanck"><i class="fab fa-facebook-square fa-2x"></i></a>
                 <a href="https://www.instagram.com/gastroquirurgicasas/" target="_blanck"><i class="fab fa-instagram-square fa-2x"></i></a>
                 <a href="https://api.whatsapp.com/send?phone=3156785070" target="_blanck"><i class="fab fa-whatsapp-square fa-2x"></i></a>
                 <a href="https://g.page/r/CWWd_FM0mzhhEAE" target="_blanck"><i class="fab fa-google-plus-square fa-2x"></i></a>
