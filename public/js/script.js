@@ -58,31 +58,81 @@ function pregunta1() {
                     confirmButtonColor: '#2a6db3'
                 })
             }else{
-                loadPregunta2();
-                setTimeout(function () {
-                resultado = document.getElementById('imc');
-                var imc = peso/(Math.pow(estatura,2));
-                img1 = document.getElementById('respuesta1');
-                if (imc < 18.5) {
-                    resultado.src = URLD + "public/resourse/img/1.png";
-                    img1.src = URDL + "public/resourse/img/1.png";
-                    console.log(respuesta1.src);
-                } else
-                if (18.5 <= imc && imc <= 24.9) {
-                    resultado.src = URLD +  "public/resourse/img/2.png";
-                } else
-                if (24.9 < imc && imc <= 29.9) {
-                    resultado.src = URLD +  "public/resourse/img/3.png";
-                } else
-                if (29.9 < imc && imc <= 34.9) {
-                    resultado.src = URLD +  "public/resourse/img/4.png";
-                } else
-                if (imc >= 35) {
-                    resultado.src = URLD +  "public/resourse/img/5.png";
-                }    
-                }, 1000)
-                
+                $.ajax({
+                    type: "POST",
+                    url: URLD + "preguntasControl/registrarDatos",
+                    data: $('#datosUsuario').serialize(),
+                    success: function (data) {
+                        /* const task = JSON.parse(data);
+                        console.log(task[0].genero);
+                        console.log(data); */
+                        loadPregunta2();
+                        setTimeout(function () {
+                        resultado = document.getElementById('imc');
+                        var imc = peso/(Math.pow(estatura,2));
+                        if (imc < 18.5) {
+                            resultado.src = URLD + "public/resourse/img/1.png";
+                            cargarRespuestas();
+                        } else
+                        if (18.5 <= imc && imc <= 24.9) {
+                            resultado.src = URLD +  "public/resourse/img/2.png";
+                            cargarRespuestas();
+                        } else
+                        if (24.9 < imc && imc <= 29.9) {
+                            resultado.src = URLD +  "public/resourse/img/3.png";
+                            cargarRespuestas();
+                        } else
+                        if (29.9 < imc && imc <= 34.9) {
+                            resultado.src = URLD +  "public/resourse/img/4.png";
+                            cargarRespuestas();
+                        } else
+                        if (imc >= 35) {
+                            resultado.src = URLD +  "public/resourse/img/5.png";
+                            cargarRespuestas();
+                        }    
+                        }, 2000)
+                    },
+                    error: function (r) {
+                        alert("Error del servidor");
+                    }
+                });
             }
+}
+
+/* Imagenes de los resultados */
+function cargarRespuestas() {
+    setTimeout(function () {
+        img1 = document.getElementById('respuesta1');
+        img2 = document.getElementById('respuesta2');
+        img3 = document.getElementById('respuesta3');
+        resultado = document.getElementById('imc');
+        var imc = peso/(Math.pow(estatura,2));
+    if (imc < 18.5) {
+        img1.src = URLD + "public/resourse/img/prueba.png";
+        img2.src = URLD + "public/resourse/img/prueba.png";
+        img3.src = URLD + "public/resourse/img/prueba.png";
+    } else
+    if (18.5 <= imc && imc <= 24.9) {   
+        img1.src = URLD + "public/resourse/img/prueba.png";
+        img2.src = URLD + "public/resourse/img/prueba.png";
+        img3.src = URLD + "public/resourse/img/prueba.png";
+    } else
+    if (24.9 < imc && imc <= 29.9) {
+        img1.src = URLD + "public/resourse/img/prueba.png";
+        img2.src = URLD + "public/resourse/img/prueba.png";
+        img3.src = URLD + "public/resourse/img/prueba.png";  
+    } else
+    if (29.9 < imc && imc <= 34.9) {
+        img1.src = URLD + "public/resourse/img/prueba.png";
+        img2.src = URLD + "public/resourse/img/prueba.png";
+        img3.src = URLD + "public/resourse/img/prueba.png";
+    } else
+    if (imc >= 35) {
+        img1.src = URLD + "public/resourse/img/prueba.png";
+        img2.src = URLD + "public/resourse/img/prueba.png";
+        img3.src = URLD + "public/resourse/img/prueba.png";
+    }    
+    }, 1000)
 }
 
 /* Cargar pregunta N°2 */
