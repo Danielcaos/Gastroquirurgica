@@ -66,7 +66,7 @@
     font-weight: bold;
 }
 
-#p2-op1, #p2-op2, #p2-op3, #p2-op4, #checkbox1, #checkbox2 {
+#p2-op1, #p2-op2, #p2-op3, #p2-op4, #checkbox1 {
     font-size: 20px;
 }
 
@@ -83,7 +83,7 @@
         font-size: 15px; 
     }
     
-    #p2-op1, #p2-op2, #p2-op3, #p2-op4, #checkbox1, #checkbox2 {
+    #p2-op1, #p2-op2, #p2-op3, #p2-op4, #checkbox1 {
         font-size: 15px;
     }
 }
@@ -118,5 +118,4 @@
 
 #respuesta1, #respuesta2, #respuesta3 {
     border-radius: 5px;
-    opacity: 1;
 }

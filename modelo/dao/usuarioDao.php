@@ -23,15 +23,14 @@ class usuarioDao extends Model{
 
     }
 
-    public function insertar($datos){
+    public function insertarUsuario($datos){
 
-        $usuario = new usuarioDto($datos['correo'], $datos['permiso']);
+        $usuario = new usuarioDto($datos['correo']);
 
-        $query = $this->db->connect()->prepare('INSERT INTO usuario (correo, permiso) VALUES (:correo, :permiso)');
+        $query = $this->db->connect()->prepare('INSERT INTO usuario (correo, permiso) VALUES (:correo)');
         try{
             $query->execute([
                 'correo' => $usuario->getCorreo(),
-                'permiso' => $usuario->getPermiso()
             ]);
             return true;
         }catch(PDOException $e){
@@ -49,7 +48,7 @@ class usuarioDao extends Model{
             ));
             $resultado = $statement->fetch();
             if(!empty($resultado)){
-                $resultado = new usuarioDto($resultado['correo'], $resultado['permiso']);}
+                $resultado = new usuarioDto($resultado['correo']);}
             return  $resultado;
         }catch(PDOException $e){
             return null;

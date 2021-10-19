@@ -21,9 +21,24 @@ function eleccionSi() {
                 confirmButtonColor: '#2a6db3'
             })
         } else {
-            window.location.href = URLD + "preguntasControl/render/pregunta";
+            console.log(email)
+            httpRequest(URLD + "preguntasControl/sesion/" + email, function(){
+                var resp = this.responseText;
+                window.location.href = URLD + "preguntasControl/render/pregunta";
+            });
         }
+}
 
+/* Divide la url */
+function httpRequest(url, callback) {
+    const http = new XMLHttpRequest();
+    http.open("GET", url);
+    http.send();
+    http.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200){
+            callback.apply(http);
+        }
+    }
 }
 
 /* Primera pregunta */
@@ -63,7 +78,7 @@ function pregunta1() {
                     url: URLD + "preguntasControl/registrarDatos",
                     data: $('#datosUsuario').serialize(),
                     success: function (data) {
-                        /* const task = JSON.parse(data);
+                       /*  const task = JSON.parse(data);
                         console.log(task[0].genero);
                         console.log(data); */
                         loadPregunta2();

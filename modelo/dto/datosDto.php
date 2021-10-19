@@ -2,7 +2,6 @@
 
     class datosDto{
 
-        public $id;
         public $correo;
         public $genero;
         public $departamento;
@@ -10,22 +9,13 @@
         public $estatura;
         public $peso;
 
-        public function __construct($id, $correo, $genero, $departamento, $edad, $estatura, $peso){
-            $this->id = $id;
+        public function __construct($correo, $genero, $departamento, $edad, $estatura, $peso){
             $this->correo = $correo;
             $this->genero = $genero;
             $this->departamento = $departamento;
             $this->edad = $edad;
             $this->estatura = $estatura;
             $this->peso = $peso;
-        }
-
-        public function getId(){
-            return $this->id;
-        }
-        
-        public function setId($id){
-            $this ->id = $id;
         }
 
         public function getCorreo(){

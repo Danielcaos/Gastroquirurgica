@@ -9,10 +9,10 @@ class preguntasControl extends Controller{
             parent::__construct();
             $this->view->datos = [];
             $this->view->imc = "";
-            if(isset($_SESSION['empresa'])){
-                header('Location: ' . constant('URL'). 'pregunta');
+            /* if(isset($_SESSION['email'])){
+                header('Location: ' . constant('URL'). 'preguntasControl/render/pregunta');
                 return;
-            }
+            } */
         }
 
         function render($ubicacion = null)
@@ -41,30 +41,37 @@ class preguntasControl extends Controller{
             $this->render("preguntas2");
         }
 
+        function sesion($param){
+            $data = $param[0];
+            $_SESSION["email"] = $data;
+            echo $_SESSION["email"];
+            /* unset($_SESSION['usuario']);elimina el dato de la sesion
+            session_destroy(); elimina las sesiones */
+        }
+
         function registrarDatos(){
             $genero = $_POST['genero'];
             $dep = $_POST['dep'];
             $edad = $_POST['edad'];
             $estatura = $_POST['estatura'];
             $peso = $_POST['peso'];
-
-            $json = array();
+            $email = $_SESSION["email"];
+            /* $json = array();
             $json[] = array(
                 'genero' => $genero,
                 'dep' => $dep,
+                'edad' => $edad,
+                'estatura' => $estatura,
+                'peso' => $peso,
+                'email' => $email,
             );
-        $JString = json_encode($json);
-        echo $JString;
-        return;
+            $JString = json_encode($json);
+            echo $JString; */
+            $this->model->insertarUsuario(['email'=>$email]);
 
-          /*   $datos = new datosDto($genero, $departamento, $edad, $estatura, $peso);
-
-            $this->model->insertarDatos($datos); */
+            $this->model->insertarDatos(['email'=>$email, 'genero'=>$genero, 'departamento'=>$dep, 'edad'=>$edad, 'estatura'=>$estatura, 'peso'=>$peso]);
+            session_destroy();
         }
-
-        $_SESSION["usuario"] = $resultado->getcodigoEstudiante();
-        unset($_SESSION['usuario']);
-        session_destroy();
         
 
 

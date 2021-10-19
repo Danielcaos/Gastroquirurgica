@@ -1,6 +1,8 @@
 <?php
 
     require 'modelo/dto/preguntasDto.php';
+    require 'modelo/dto/usuarioDto.php';
+    require 'modelo/dto/datosDto.php';
 
     class preguntasDao extends Model{
 
@@ -16,6 +18,43 @@
                 $query->execute();
                 $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
                 return $resultado;
+            }catch(PDOException $e){
+                return false;
+            }
+    
+        }
+
+        public function insertarDatos($datos){
+
+            $datos = new datosDto($datos['correo'], $datos['genero'], $datos['departamento'], $datos['edad'], $datos['estatura'], $datos['peso']);
+    
+            $query = $this->db->connect()->prepare('INSERT INTO datos (correo, genero, departamento, edad, estatura, peso) VALUES (:id, :correo, :genero, :departamento, :edad, :estatura, :peso)');
+            try{
+                $query->execute([
+                    'correo' => $datos->getCorreo(),
+                    'genero' => $datos->getGenero(),
+                    'departamento' => $datos->getDep(),
+                    'edad' => $datos->getEdad(),
+                    'estatura' => $datos->getEstatura(),
+                    'peso' => $datos->getPeso()
+                ]);
+                return true;
+            }catch(PDOException $e){
+                return false;
+            }
+    
+        }
+
+        public function insertarUsuario($datos){
+
+            $usuario = new usuarioDto($datos['correo']);
+    
+            $query = $this->db->connect()->prepare('INSERT INTO usuario (correo) VALUES (:correo)');
+            try{
+                $query->execute([
+                    'correo' => $usuario->getCorreo(),
+                ]);
+                return true;
             }catch(PDOException $e){
                 return false;
             }

@@ -3,11 +3,9 @@
     class usuarioDto{
 
         public $correo;
-        public $permiso;
 
-        public function __construct($correo, $permiso){
+        public function __construct($correo){
             $this->correo = $correo;
-            $this->permiso = $permiso;
         }
         
         public function getCorreo(){
@@ -17,15 +15,6 @@
         public function setCorreo($correo){
             $this ->correo = $correo;
         }
-        
-        public function getPermiso(){
-            return $this->permiso;
-        }
-        
-        public function setNombre($permiso){
-            $this ->permiso = $permiso;
-        }
-
 
     }
 
