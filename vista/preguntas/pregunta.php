@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <!-- Icono Pestaña -->
-    <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/resourse/img/pestania.png" />
+    <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/resource/img/pestania.png" />
 
     <!-- CSS -->
     <link href="<?php echo constant('URL') ?>public/css/style.css" rel="stylesheet">
@@ -44,7 +44,7 @@
     <nav class="navbar" id="menu">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="<?php echo constant('URL') ?>public/resourse/img/horizontal.png" alt="" width="200"
+                <img src="<?php echo constant('URL') ?>public/resource/img/horizontal.png" alt="" width="200"
                     class="img-fluid">
             </a>
             <div id="redes">
@@ -71,7 +71,7 @@
                     <br>
                     <div class="row">
                         <div class="col-sm-4"><img id="doctor"
-                                src="<?php echo constant('URL') ?>public/resourse/img/doctor.png" class="img-fluid"
+                                src="<?php echo constant('URL') ?>public/resource/img/doctor.png" class="img-fluid"
                                 alt="..."></div>
                         <div class="col-sm-8">
                             <p style="text-align: justify;" id="text">Lorem ipsum dolor sit amet consectetur adipisicing

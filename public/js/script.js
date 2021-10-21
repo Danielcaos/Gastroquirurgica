@@ -86,23 +86,28 @@ function pregunta1() {
                         resultado = document.getElementById('imc');
                         var imc = peso/(Math.pow(estatura,2));
                         if (imc < 18.5) {
-                            resultado.src = URLD + "public/resourse/img/1.png";
+                            cargarTexto();
+                            resultado.src = URLD + "public/resource/img/1.png";
                             cargarRespuestas();
                         } else
                         if (18.5 <= imc && imc <= 24.9) {
-                            resultado.src = URLD +  "public/resourse/img/2.png";
+                            cargarTexto();
+                            resultado.src = URLD +  "public/resource/img/2.png";
                             cargarRespuestas();
                         } else
                         if (24.9 < imc && imc <= 29.9) {
-                            resultado.src = URLD +  "public/resourse/img/3.png";
+                            cargarTexto();
+                            resultado.src = URLD +  "public/resource/img/3.png";
                             cargarRespuestas();
                         } else
                         if (29.9 < imc && imc <= 34.9) {
-                            resultado.src = URLD +  "public/resourse/img/4.png";
+                            cargarTexto();
+                            resultado.src = URLD +  "public/resource/img/4.png";
                             cargarRespuestas();
                         } else
                         if (imc >= 35) {
-                            resultado.src = URLD +  "public/resourse/img/5.png";
+                            cargarTexto();
+                            resultado.src = URLD +  "public/resource/img/5.png";
                             cargarRespuestas();
                         }    
                         }, 2000)
@@ -114,6 +119,48 @@ function pregunta1() {
             }
 }
 
+/* Texto de los resultados */
+function cargarTexto() {
+    setTimeout(function () {
+        texto1 = document.getElementById('text1');
+        texto2 = document.getElementById('text2');
+        texto3 = document.getElementById('text3');
+        texto4 = document.getElementById('text4');
+        resultado = document.getElementById('imc');
+        var imc = peso/(Math.pow(estatura,2));
+    if (imc < 18.5) {
+        text1.innerHTML = "Paragraph changed!";
+        text2.innerHTML = "Paragraph changed!";
+        text3.innerHTML = "Paragraph changed!";
+        text4.innerHTML = "Paragraph changed!";
+    } else
+    if (18.5 <= imc && imc <= 24.9) {   
+        text1.innerHTML = "Paragraph changed!";
+        text2.innerHTML = "Paragraph changed!";
+        text3.innerHTML = "Paragraph changed!";
+        text4.innerHTML = "Paragraph changed!";
+    } else
+    if (24.9 < imc && imc <= 29.9) {
+        text1.innerHTML = "Paragraph changed!";
+        text2.innerHTML = "Paragraph changed!";
+        text3.innerHTML = "Paragraph changed!";
+        text4.innerHTML = "Paragraph changed!";  
+    } else
+    if (29.9 < imc && imc <= 34.9) {
+        text1.innerHTML = "Paragraph changed!";
+        text2.innerHTML = "Paragraph changed!";
+        text3.innerHTML = "Paragraph changed!";
+        text4.innerHTML = "Paragraph changed!";
+    } else
+    if (imc >= 35) {
+        text1.innerHTML = "Paragraph changed!";
+        text2.innerHTML = "Paragraph changed!";
+        text3.innerHTML = "Paragraph changed!";
+        text4.innerHTML = "Paragraph changed!";
+    }    
+    }, 1000)
+}
+
 /* Imagenes de los resultados */
 function cargarRespuestas() {
     setTimeout(function () {
@@ -123,29 +170,29 @@ function cargarRespuestas() {
         resultado = document.getElementById('imc');
         var imc = peso/(Math.pow(estatura,2));
     if (imc < 18.5) {
-        img1.src = URLD + "public/resourse/img/prueba.png";
-        img2.src = URLD + "public/resourse/img/prueba.png";
-        img3.src = URLD + "public/resourse/img/prueba.png";
+        img1.src = URLD + "public/resource/img/prueba.png";
+        img2.src = URLD + "public/resource/img/prueba.png";
+        img3.src = URLD + "public/resource/img/prueba.png";
     } else
     if (18.5 <= imc && imc <= 24.9) {   
-        img1.src = URLD + "public/resourse/img/prueba.png";
-        img2.src = URLD + "public/resourse/img/prueba.png";
-        img3.src = URLD + "public/resourse/img/prueba.png";
+        img1.src = URLD + "public/resource/img/prueba.png";
+        img2.src = URLD + "public/resource/img/prueba.png";
+        img3.src = URLD + "public/resource/img/prueba.png";
     } else
     if (24.9 < imc && imc <= 29.9) {
-        img1.src = URLD + "public/resourse/img/prueba.png";
-        img2.src = URLD + "public/resourse/img/prueba.png";
-        img3.src = URLD + "public/resourse/img/prueba.png";  
+        img1.src = URLD + "public/resource/img/prueba.png";
+        img2.src = URLD + "public/resource/img/prueba.png";
+        img3.src = URLD + "public/resource/img/prueba.png";  
     } else
     if (29.9 < imc && imc <= 34.9) {
-        img1.src = URLD + "public/resourse/img/prueba.png";
-        img2.src = URLD + "public/resourse/img/prueba.png";
-        img3.src = URLD + "public/resourse/img/prueba.png";
+        img1.src = URLD + "public/resource/img/prueba.png";
+        img2.src = URLD + "public/resource/img/prueba.png";
+        img3.src = URLD + "public/resource/img/prueba.png";
     } else
     if (imc >= 35) {
-        img1.src = URLD + "public/resourse/img/prueba.png";
-        img2.src = URLD + "public/resourse/img/prueba.png";
-        img3.src = URLD + "public/resourse/img/prueba.png";
+        img1.src = URLD + "public/resource/img/prueba.png";
+        img2.src = URLD + "public/resource/img/prueba.png";
+        img3.src = URLD + "public/resource/img/prueba.png";
     }    
     }, 1000)
 }

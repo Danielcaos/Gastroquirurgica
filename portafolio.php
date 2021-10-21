@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <!-- Icono Pestaña -->
-    <link rel="shortcut icon" href="public/resourse/img/pestania.png" />
+    <link rel="shortcut icon" href="public/resource/img/pestania.png" />
 
     <!-- CSS -->
     <link href="public/css/style.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         </h4>
         <br>
         <div class="row">
-            <div class="col-sm-5"><img id="img-portafolio" src="public/resourse/img/IMG_3303.jpg" class="img-fluid" alt="...">
+            <div class="col-sm-5"><img id="img-portafolio" src="public/resource/img/IMG_3303.jpg" class="img-fluid" alt="...">
             </div>
             <div class="col-sm-7" id="lista-portafolio">
                 <p style="font-weight: bold;" id="text">SERVICIOS DE CONSULTA EXTERNA</p>
@@ -74,7 +74,7 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-sm-5"><img id="img-portafolio" src="public/resourse/img/IMG_8840.jpg" class="img-fluid" alt="...">
+            <div class="col-sm-5"><img id="img-portafolio" src="public/resource/img/IMG_8840.jpg" class="img-fluid" alt="...">
             </div>
             <div class="col-sm-7" id="lista-portafolio">
                 <p style="font-weight: bold;" id="text">SERVICIOS DE CIRUGíA</p>
@@ -89,7 +89,7 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-sm-5"><img id="img-portafolio" src="public/resourse/img/IMG_8023e.jpg" class="img-fluid" alt="...">
+            <div class="col-sm-5"><img id="img-portafolio" src="public/resource/img/IMG_8023e.jpg" class="img-fluid" alt="...">
             </div>
             <div class="col-sm-7" id="lista-portafolio">
                 <p style="font-weight: bold;" id="text">SERVICIOS DE APOYO DIAGNOSTICO Y COMPLEMENTACIÓN TERAPÉUTICA
@@ -105,7 +105,7 @@
         <br>
         <div style="text-align: center;">
             <a class="btn btn-primary" id="eleccion"
-                href="public/resourse/documentos/PORTAFOLIO DE SERVICIOS GASTROQUIRURGICA 2019-FINAL.pdf"
+                href="public/resource/documentos/PORTAFOLIO DE SERVICIOS GASTROQUIRURGICA 2019-FINAL.pdf"
                 download="Clinica Gastroquirurgica">DESCARGA NUESTRO PORTAFOLIO <i class="fas fa-file-download"></i></a>
         </div>
         <br>

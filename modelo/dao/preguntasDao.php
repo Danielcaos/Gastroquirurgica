@@ -28,7 +28,7 @@
 
             $datos = new datosDto($datos['correo'], $datos['genero'], $datos['departamento'], $datos['edad'], $datos['estatura'], $datos['peso']);
     
-            $query = $this->db->connect()->prepare('INSERT INTO datos (correo, genero, departamento, edad, estatura, peso) VALUES (:id, :correo, :genero, :departamento, :edad, :estatura, :peso)');
+            $query = $this->db->connect()->prepare('INSERT INTO datos (correo, genero, departamento, edad, estatura, peso) VALUES (:correo, :genero, :departamento, :edad, :estatura, :peso)');
             try{
                 $query->execute([
                     'correo' => $datos->getCorreo(),

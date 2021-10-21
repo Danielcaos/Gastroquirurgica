@@ -55,7 +55,7 @@ class preguntasControl extends Controller{
             $edad = $_POST['edad'];
             $estatura = $_POST['estatura'];
             $peso = $_POST['peso'];
-            $email = $_SESSION["email"];
+            $correo = $_SESSION["email"];
             /* $json = array();
             $json[] = array(
                 'genero' => $genero,
@@ -67,9 +67,9 @@ class preguntasControl extends Controller{
             );
             $JString = json_encode($json);
             echo $JString; */
-            $this->model->insertarUsuario(['email'=>$email]);
+            $this->model->insertarUsuario(['correo'=>$correo]);
 
-            $this->model->insertarDatos(['email'=>$email, 'genero'=>$genero, 'departamento'=>$dep, 'edad'=>$edad, 'estatura'=>$estatura, 'peso'=>$peso]);
+            $this->model->insertarDatos(['correo'=>$correo, 'genero'=>$genero, 'departamento'=>$dep, 'edad'=>$edad, 'estatura'=>$estatura, 'peso'=>$peso]);
             session_destroy();
         }
         
