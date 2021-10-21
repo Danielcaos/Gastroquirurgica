@@ -142,19 +142,19 @@ function cargarTexto() {
     } else
     if (24.9 < imc && imc <= 29.9) {
         text1.innerHTML = "Paragraph changed!";
-        text2.innerHTML = "Paragraph changed!";
+        text2.innerHTML = "Nuestro equipo de briátrica cuenta con personal altamente calificado: Dra. Carmen Zenovia Moros Psicologa, Lcda. Elix A Lozano E Nutricionista, Dr. Ivar M Duran V Deportólogo, Dra. Sandra P Martin N Gastroenterólogo, Dr. Manuel E Moros V Cirugía Bariátrica";
         text3.innerHTML = "Paragraph changed!";
         text4.innerHTML = "Paragraph changed!";  
     } else
     if (29.9 < imc && imc <= 34.9) {
         text1.innerHTML = "Paragraph changed!";
-        text2.innerHTML = "Paragraph changed!";
+        text2.innerHTML = "Nuestro equipo de briátrica cuenta con personal altamente calificado: Dra. Carmen Zenovia Moros Psicologa, Lcda. Elix A Lozano E Nutricionista, Dr. Ivar M Duran V Deportólogo, Dra. Sandra P Martin N Gastroenterólogo, Dr. Manuel E Moros V Cirugía Bariátrica";
         text3.innerHTML = "Paragraph changed!";
         text4.innerHTML = "Paragraph changed!";
     } else
     if (imc >= 35) {
         text1.innerHTML = "Paragraph changed!";
-        text2.innerHTML = "Paragraph changed!";
+        text2.innerHTML = "Nuestro equipo de briátrica cuenta con personal altamente calificado: Dra. Carmen Zenovia Moros Psicologa, Lcda. Elix A Lozano E Nutricionista, Dr. Ivar M Duran V Deportólogo, Dra. Sandra P Martin N Gastroenterólogo, Dr. Manuel E Moros V Cirugía Bariátrica";
         text3.innerHTML = "Paragraph changed!";
         text4.innerHTML = "Paragraph changed!";
     }    
@@ -180,17 +180,17 @@ function cargarRespuestas() {
         img3.src = URLD + "public/resource/img/prueba.png";
     } else
     if (24.9 < imc && imc <= 29.9) {
-        img1.src = URLD + "public/resource/img/prueba.png";
+        img1.src = URLD + "public/resource/img/equipo.png";
         img2.src = URLD + "public/resource/img/prueba.png";
         img3.src = URLD + "public/resource/img/prueba.png";  
     } else
     if (29.9 < imc && imc <= 34.9) {
-        img1.src = URLD + "public/resource/img/prueba.png";
+        img1.src = URLD + "public/resource/img/equipo.png";
         img2.src = URLD + "public/resource/img/prueba.png";
         img3.src = URLD + "public/resource/img/prueba.png";
     } else
     if (imc >= 35) {
-        img1.src = URLD + "public/resource/img/prueba.png";
+        img1.src = URLD + "public/resource/img/equipo.png";
         img2.src = URLD + "public/resource/img/prueba.png";
         img3.src = URLD + "public/resource/img/prueba.png";
     }    
