@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <!-- Icono Pestaña -->
-    <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/resourse/img/pestania.png" />
+    <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/resource/img/pestania.png" />
 
     <!-- CSS -->
     <link href="<?php echo constant('URL') ?>public/css/style.css" rel="stylesheet">
@@ -39,7 +39,7 @@
     <nav class="navbar" id="menu">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="<?php echo constant('URL') ?>public/resourse/img/horizontal.png" alt="" width="200"
+                <img src="<?php echo constant('URL') ?>public/resource/img/horizontal.png" alt="" width="200"
                     class="img-fluid">
             </a>
             <div id="redes">
@@ -62,7 +62,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="card mb-3">
-                    <img src="<?php echo constant('URL') ?>public/resourse/img/si.png" class="card-img-top" alt="...">
+                    <img src="<?php echo constant('URL') ?>public/resource/img/si.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <button id="eleccionsi" onclick="eleccionSi()" type="button" class="btn btn-primary">SI</button>
                     </div>
@@ -70,7 +70,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="card mb-3">
-                    <img src="<?php echo constant('URL') ?>public/resourse/img/no.png" class="card-img-top" alt="...">
+                    <img src="<?php echo constant('URL') ?>public/resource/img/no.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <a id="eleccionno" href="portafolio.php" class="btn btn-primary">NO</a>
                     </div>

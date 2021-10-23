@@ -123,3 +123,8 @@
 #text1, #text2, #text3, #text4 {
     font-size: 25px;
 }
+
+#resultado-imc {
+    font-size: 35;
+    font-family: 'PT Sans', sans-serif;
+}

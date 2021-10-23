@@ -83,29 +83,35 @@ function pregunta1() {
                         console.log(data); */
                         loadPregunta2();
                         setTimeout(function () {
+                        imprimir = document.getElementById('resultado-imc')
                         resultado = document.getElementById('imc');
                         var imc = peso/(Math.pow(estatura,2));
                         if (imc < 18.5) {
+                            imprimir.innerHTML = "Segun tu indice de masa corporal " + imc.toFixed(2);
                             cargarTexto();
                             resultado.src = URLD + "public/resource/img/1.png";
                             cargarRespuestas();
                         } else
                         if (18.5 <= imc && imc <= 24.9) {
+                            imprimir.innerHTML = "Segun tu indice de masa corporal " + imc.toFixed(2);
                             cargarTexto();
                             resultado.src = URLD +  "public/resource/img/2.png";
                             cargarRespuestas();
                         } else
                         if (24.9 < imc && imc <= 29.9) {
+                            imprimir.innerHTML = "Segun tu indice de masa corporal " + imc.toFixed(2);
                             cargarTexto();
                             resultado.src = URLD +  "public/resource/img/3.png";
                             cargarRespuestas();
                         } else
                         if (29.9 < imc && imc <= 34.9) {
+                            imprimir.innerHTML = "Segun tu indice de masa corporal " + imc.toFixed(2);
                             cargarTexto();
                             resultado.src = URLD +  "public/resource/img/4.png";
                             cargarRespuestas();
                         } else
                         if (imc >= 35) {
+                            imprimir.innerHTML = "Segun tu indice de masa corporal " + imc.toFixed(2);
                             cargarTexto();
                             resultado.src = URLD +  "public/resource/img/5.png";
                             cargarRespuestas();
@@ -129,31 +135,31 @@ function cargarTexto() {
         resultado = document.getElementById('imc');
         var imc = peso/(Math.pow(estatura,2));
     if (imc < 18.5) {
-        text1.innerHTML = "Paragraph changed!";
+        text1.innerHTML = "La causa más frecuente de peso bajo es la desnutrición, debido a la ausencia de alimentos adecuados. Esta causa de bajo peso puede ser debido a múltiples factores, como un trastorno alimentario, diabetes o glándula tiroides hiperactiva.";
         text2.innerHTML = "Paragraph changed!";
         text3.innerHTML = "Paragraph changed!";
         text4.innerHTML = "Paragraph changed!";
     } else
     if (18.5 <= imc && imc <= 24.9) {   
-        text1.innerHTML = "Paragraph changed!";
+        text1.innerHTML = "Para lograr y mantener un peso saludable no está relacionada con cambios en la alimentación a corto plazo. Se trata en realidad de llevar un estilo de vida que incluya alimentación saludable, actividad física regular y equilibrio entre la cantidad de calorías consumidas y utilizadas.";
         text2.innerHTML = "Paragraph changed!";
         text3.innerHTML = "Paragraph changed!";
         text4.innerHTML = "Paragraph changed!";
     } else
     if (24.9 < imc && imc <= 29.9) {
-        text1.innerHTML = "Paragraph changed!";
+        text1.innerHTML = "Una vida sedentaria y comer demasiado y mal son las causas más comunes. Aun así, puede estar derivado de afecciones genéticas, efectos secundarios de algún medicamento o enfermedades endocrinas.";
         text2.innerHTML = "Nuestro equipo de briátrica cuenta con personal altamente calificado: Dra. Carmen Zenovia Moros Psicologa, Lcda. Elix A Lozano E Nutricionista, Dr. Ivar M Duran V Deportólogo, Dra. Sandra P Martin N Gastroenterólogo, Dr. Manuel E Moros V Cirugía Bariátrica";
         text3.innerHTML = "Paragraph changed!";
-        text4.innerHTML = "Paragraph changed!";  
+        text4.innerHTML = "Al colocar el balón intragástrico en el estómago, se reduce la capaidad de este por lo que la persona se siente saciada antes, ya que cabe menos comida.";  
     } else
     if (29.9 < imc && imc <= 34.9) {
-        text1.innerHTML = "Paragraph changed!";
+        text1.innerHTML = "Existen causas genéticas, causas hormonales y causas de comportamiento, pero normalmente la obesidad se da cuando la persona ingiere más calorías de las que se queman con la actividad física. Estas calorías en exceso, acaban por acumularse en el cuerpo en forma de grasa.";
         text2.innerHTML = "Nuestro equipo de briátrica cuenta con personal altamente calificado: Dra. Carmen Zenovia Moros Psicologa, Lcda. Elix A Lozano E Nutricionista, Dr. Ivar M Duran V Deportólogo, Dra. Sandra P Martin N Gastroenterólogo, Dr. Manuel E Moros V Cirugía Bariátrica";
         text3.innerHTML = "Paragraph changed!";
         text4.innerHTML = "Paragraph changed!";
     } else
     if (imc >= 35) {
-        text1.innerHTML = "Paragraph changed!";
+        text1.innerHTML = "La ingesta de productos con alto valor calórico, asociado a un estilo de vida sedentario y poco sano suele ser el principal culpable del cambio en el peso de la persona.";
         text2.innerHTML = "Nuestro equipo de briátrica cuenta con personal altamente calificado: Dra. Carmen Zenovia Moros Psicologa, Lcda. Elix A Lozano E Nutricionista, Dr. Ivar M Duran V Deportólogo, Dra. Sandra P Martin N Gastroenterólogo, Dr. Manuel E Moros V Cirugía Bariátrica";
         text3.innerHTML = "Paragraph changed!";
         text4.innerHTML = "Paragraph changed!";
@@ -182,7 +188,7 @@ function cargarRespuestas() {
     if (24.9 < imc && imc <= 29.9) {
         img1.src = URLD + "public/resource/img/equipo.png";
         img2.src = URLD + "public/resource/img/prueba.png";
-        img3.src = URLD + "public/resource/img/prueba.png";  
+        img3.src = URLD + "public/resource/img/balon.png";  
     } else
     if (29.9 < imc && imc <= 34.9) {
         img1.src = URLD + "public/resource/img/equipo.png";
@@ -209,3 +215,64 @@ function loadPregunta2() {
     xhttp.send();
     return false;
 }
+
+/* $("#estatura").on({
+    "focus": function (event) {
+        $(event.target).select();
+    },
+    "keyup": function (event) {
+        $(event.target).val(function (index, value ) {
+            return value.replace(/\D/g, "")
+                        .replace(/([0-9])([0-9]{2})$/, '$1,$2')
+                        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ".");
+        });
+    }
+});
+
+$("#epeso").on({
+    "focus": function (event) {
+        $(event.target).select();
+    },
+    "keyup": function (event) {
+        $(event.target).val(function (index, value ) {
+            return value.replace(/\D/g, "")
+                        .replace(/([0-9])([0-9]{2}))$/, '$1,$2')
+                        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ".");
+        });
+    }
+}); */
+
+/* function filterFloat(evt,input){
+    // Backspace = 8, Enter = 13, ‘0′ = 48, ‘9′ = 57, ‘.’ = 46, ‘-’ = 43
+    var key = window.Event ? evt.which : evt.keyCode;    
+    var chark = String.fromCharCode(key);
+    var tempValue = input.value+chark;
+    if(key >= 48 && key <= 57){
+        if(filter(tempValue)=== false){
+            return false;
+        }else{       
+            return true;
+        }
+    }else{
+          if(key == 8 || key == 13 || key == 0) {     
+              return true;              
+          }else if(key == 46){
+                if(filter(tempValue)=== false){
+                    return false;
+                }else{       
+                    return true;
+                }
+          }else{
+              return false;
+          }
+    }
+}
+function filter(__val__){
+    var preg = /([0-9]+\.?[0-9]{0,4})$/; 
+    if(preg.test(__val__) === true){
+        return true;
+    }else{
+       return false;
+    }
+    
+} */

@@ -112,7 +112,7 @@
                                 aria-describedby="basic-addon1" name="edad">
                         </div>
                         <div class="input-group mb-3">
-                            <input id="estatura" type="number" class="form-control" placeholder="Estatura (m)"
+                            <input id="estatura" onkeypress="return filterFloat(event,this);" type="number" class="form-control" placeholder="Estatura (m)"
                                 aria-label="Username" aria-describedby="basic-addon1" name="estatura">
                         </div>
                         <div class="input-group mb-3">

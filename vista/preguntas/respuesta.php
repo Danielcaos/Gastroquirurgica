@@ -3,9 +3,9 @@
         <div class="container" id="preguntas">
             <div id="contenido-pregunta">
                 <div id="encabezado">
-                    <h2>
-                        SEGUN TU INDICE DE MASA CORPORAL
-                    </h2>
+                    <P id="resultado-imc">
+                        
+                    </P>
                 </div>
                 <br>
                 <div class="row">
