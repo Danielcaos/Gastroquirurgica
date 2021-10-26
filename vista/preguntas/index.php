@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-    <div class="container" id="liveAlertPlaceholder"></div>
+    <div class="container" id="abajo"></div>
     <nav class="navbar navbar-light bg-light">
         <div class="container">
             <div style="margin: 0 auto;">
