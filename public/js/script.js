@@ -12,6 +12,9 @@ function eleccionSi() {
             text: 'Para continuar, acepta nuestros términos, políticas y seleccione la opcion SI',
             confirmButtonColor: '#2a6db3'
         })
+        setTimeout(function () {
+            window.scrollTo(0,document.body.scrollHeight);
+        }, 4000)
     } else
         if (email.length == 0 || !re.exec(email)) {
             Swal.fire({
@@ -20,6 +23,9 @@ function eleccionSi() {
                 text: 'Por favor ingrese una direccion de correo electronico valida y seleccione la opcion SI',
                 confirmButtonColor: '#2a6db3'
             })
+            setTimeout(function () {
+                window.scrollTo(0,document.body.scrollHeight);
+            }, 4000)
         } else {
             console.log(email)
             httpRequest(URLD + "preguntasControl/sesion/" + email, function(){
