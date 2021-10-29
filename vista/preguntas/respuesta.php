@@ -12,7 +12,7 @@
                 </div>
                 <br>
                 <div style="text-align: center;">
-                    <img id="imc" src="" class="img-fluid" alt="...">
+                    <img id="imc" src="http://localhost/AppWeb/public/resource/img/preloader2.gif" class="img-fluid" alt="...">
                 </div>
                 <br>
                 <div class="container" style="background-color: #8fb1d4; border-radius: 5px;">

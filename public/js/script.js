@@ -6,6 +6,7 @@ function eleccionSi() {
     re = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
     if (!document.getElementById('checkbox1').checked) {
+        document.getElementById('checkbox1').classList.add("is-invalid");
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -14,9 +15,10 @@ function eleccionSi() {
         })
         setTimeout(function () {
             window.scrollTo(0,document.body.scrollHeight);
-        }, 4000)
+        }, 3000)
     } else
         if (email.length == 0 || !re.exec(email)) {
+            document.getElementById('email').classList.add("is-invalid");
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',

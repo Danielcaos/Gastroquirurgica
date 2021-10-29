@@ -69,31 +69,12 @@
                         </h3>
                     </div>
                     <br>
-                    <div class="row">
-                        <div class="col-sm-4"><img id="doctor"
-                                src="<?php echo constant('URL') ?>public/resource/img/doctor.png" class="img-fluid"
-                                alt="..."></div>
-                        <div class="col-sm-8">
-                            <p style="text-align: justify;" id="text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Architecto tempora
-                                voluptate ipsam reprehenderit. Perspiciatis animi velit enim repellendus alias
-                                aspernatur
-                                nostrum magnam debitis blanditiis, fugit dolorem sit, sequi recusandae iste! Lorem
-                                ipsum,
-                                dolor
-                                sit amet consectetur adipisicing elit. Repellat reiciendis debitis aliquam sunt fuga
-                                inventore
-                                laborum dolor optio porro nostrum quo, adipisci dignissimos perferendis soluta quam,
-                                autem
-                                illum. Nam, ipsum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                                blanditiis
-                                voluptates aperiam quod a ut repellendus nostrum, tenetur, enim alias sapiente, at non
-                                architecto. Perferendis veniam cum possimus vel quibusdam.</p>
-                        </div>
+                    <div style="text-align: center;">
+                        <img id="doctor" src="<?php echo constant('URL') ?>public/resource/img/inicio.png" class="img-fluid" alt="...">
                     </div>
                     <br>
-                    <form action="<?php echo constant('URL') ?>preguntaControl/registrarDatos" method="post" id="datosUsuario">
+                    <form action="<?php echo constant('URL') ?>preguntaControl/registrarDatos" method="post"
+                        id="datosUsuario">
                         <select id="genero" class="form-select" aria-label="Default select example" name="genero">
                             <option selected>Genero</option>
                             <option value="Masculino">Masculino</option>
