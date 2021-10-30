@@ -210,12 +210,12 @@ function cargarRespuestas() {
     } else
     if (29.9 < imc && imc <= 34.9) {
         img1.src = URLD + "public/resource/img/equipo.png";
-        img2.src = URLD + "public/resource/img/prueba.png";
+        img2.src = URLD + "public/resource/img/escalera.png";
         img3.src = URLD + "public/resource/img/prueba.png";
     } else
     if (imc >= 35) {
         img1.src = URLD + "public/resource/img/equipo.png";
-        img2.src = URLD + "public/resource/img/prueba.png";
+        img2.src = URLD + "public/resource/img/escalera.png";
         img3.src = URLD + "public/resource/img/prueba.png";
     }    
     }, 1000)
