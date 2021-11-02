@@ -152,36 +152,36 @@ function pregunta1() {
 /* Texto de los resultados */
 function cargarTexto() {
     setTimeout(function () {
-        texto2 = document.getElementById('text2');
-        texto3 = document.getElementById('text3');
-        texto4 = document.getElementById('text4');
+        img1 = document.getElementById('respuestaA');
+        img2 = document.getElementById('respuestaB');
+        img3 = document.getElementById('respuestaC');
         resultado = document.getElementById('imc');
         var imc = peso/(Math.pow(estatura,2));
-    if (imc < 18.5) {
-        text2.innerHTML = "Paragraph changed!";
-        text3.innerHTML = "Paragraph changed!";
-        text4.innerHTML = "Paragraph changed!";
-    } else
-    if (18.5 <= imc && imc <= 24.9) {   
-        text2.innerHTML = "Paragraph changed!";
-        text3.innerHTML = "Paragraph changed!";
-        text4.innerHTML = "Paragraph changed!";
-    } else
-    if (24.9 < imc && imc <= 29.9) {
-        text2.innerHTML = "Nuestro equipo de briátrica cuenta con personal altamente calificado: Dra. Carmen Zenovia Moros Psicologa, Lcda. Elix A Lozano E Nutricionista, Dr. Ivar M Duran V Deportólogo, Dra. Sandra P Martin N Gastroenterólogo, Dr. Manuel E Moros V Cirugía Bariátrica";
-        text3.innerHTML = "Paragraph changed!";
-        text4.innerHTML = "Al colocar el balón intragástrico en el estómago, se reduce la capaidad de este por lo que la persona se siente saciada antes, ya que cabe menos comida.";  
-    } else
-    if (29.9 < imc && imc <= 34.9) {
-        text2.innerHTML = "Nuestro equipo de briátrica cuenta con personal altamente calificado: Dra. Carmen Zenovia Moros Psicologa, Lcda. Elix A Lozano E Nutricionista, Dr. Ivar M Duran V Deportólogo, Dra. Sandra P Martin N Gastroenterólogo, Dr. Manuel E Moros V Cirugía Bariátrica";
-        text3.innerHTML = "Paragraph changed!";
-        text4.innerHTML = "Paragraph changed!";
-    } else
-    if (imc >= 35) {
-        text2.innerHTML = "Nuestro equipo de briátrica cuenta con personal altamente calificado: Dra. Carmen Zenovia Moros Psicologa, Lcda. Elix A Lozano E Nutricionista, Dr. Ivar M Duran V Deportólogo, Dra. Sandra P Martin N Gastroenterólogo, Dr. Manuel E Moros V Cirugía Bariátrica";
-        text3.innerHTML = "Paragraph changed!";
-        text4.innerHTML = "Paragraph changed!";
-    }    
+        if (imc < 18.5) {
+            img1.src = URLD + "public/resource/img/ejercicioT.png";
+            img2.src = URLD + "public/resource/img/dietaT.png";
+            /* img3.src = URLD + "public/resource/img/prueba.png"; */
+        } else
+        if (18.5 <= imc && imc <= 24.9) {   
+            img1.src = URLD + "public/resource/img/ejercicioT.png";
+            img2.src = URLD + "public/resource/img/dietaT.png";
+            /* img3.src = URLD + "public/resource/img/prueba.png"; */
+        } else
+        if (24.9 < imc && imc <= 29.9) {
+            img1.src = URLD + "public/resource/img/equipoT.png";
+            /* img2.src = URLD + "public/resource/img/prueba.png";
+            img3.src = URLD + "public/resource/img/balon.png"; */  
+        } else
+        if (29.9 < imc && imc <= 34.9) {
+            img1.src = URLD + "public/resource/img/equipoT.png";
+            img2.src = URLD + "public/resource/img/escaleraT.png";
+            /* img3.src = URLD + "public/resource/img/prueba.png"; */
+        } else
+        if (imc >= 35) {
+            img1.src = URLD + "public/resource/img/equipoT.png";
+            img2.src = URLD + "public/resource/img/escaleraT.png";
+            /* img3.src = URLD + "public/resource/img/prueba.png"; */
+        }    
     }, 1000)
 }
 
@@ -194,18 +194,18 @@ function cargarRespuestas() {
         resultado = document.getElementById('imc');
         var imc = peso/(Math.pow(estatura,2));
     if (imc < 18.5) {
-        img1.src = URLD + "public/resource/img/prueba.png";
-        img2.src = URLD + "public/resource/img/prueba.png";
-        img3.src = URLD + "public/resource/img/prueba.png";
+        img1.src = URLD + "public/resource/img/ejercicio.png";
+        img2.src = URLD + "public/resource/img/dieta.png";
+        img3.src = URLD + "public/resource/img/control.png";
     } else
     if (18.5 <= imc && imc <= 24.9) {   
-        img1.src = URLD + "public/resource/img/prueba.png";
-        img2.src = URLD + "public/resource/img/prueba.png";
-        img3.src = URLD + "public/resource/img/prueba.png";
+        img1.src = URLD + "public/resource/img/ejercicio.png";
+        img2.src = URLD + "public/resource/img/dieta.png";
+        img3.src = URLD + "public/resource/img/control.png";
     } else
     if (24.9 < imc && imc <= 29.9) {
         img1.src = URLD + "public/resource/img/equipo.png";
-        img2.src = URLD + "public/resource/img/prueba.png";
+        img2.src = URLD + "public/resource/img/apoyo.png";
         img3.src = URLD + "public/resource/img/balon.png";  
     } else
     if (29.9 < imc && imc <= 34.9) {

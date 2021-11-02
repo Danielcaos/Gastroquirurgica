@@ -12,7 +12,12 @@
                 </div>
                 <br>
                 <div style="text-align: center;">
-                    <img id="imc" src="http://localhost/AppWeb/public/resource/img/preloader2.gif" class="img-fluid" alt="...">
+                    <img id="imc" src="http://localhost/AppWeb/public/resource/img/preloader2.gif" class="img-fluid"
+                        alt="...">
+                </div>
+                <br>
+                <div style="text-align: center;">
+                    <h3>Te ofrecemos estas recomendaciones</h3>
                 </div>
                 <br>
                 <div class="container" style="background-color: #8fb1d4; border-radius: 5px;">
@@ -21,7 +26,8 @@
                                 src="http://localhost/AppWeb/public/resource/img/preloader.gif" class="img-fluid"
                                 alt="..."></div>
                         <div class="col-sm-8">
-                            <p style="text-align: justify; color: white;" id="text2"></p>
+                            <img id="respuestaA" src="http://localhost/AppWeb/public/resource/img/preloader3.gif"
+                                class="img-fluid" alt="...">
                         </div>
                     </div>
                     <br>
@@ -30,7 +36,8 @@
                                 src="http://localhost/AppWeb/public/resource/img/preloader.gif" class="img-fluid"
                                 alt="..."></div>
                         <div class="col-sm-8">
-                            <p style="text-align: justify; color: white;" id="text3"></p>
+                            <img id="respuestaB" src="http://localhost/AppWeb/public/resource/img/preloader3.gif"
+                                class="img-fluid" alt="...">
                         </div>
                     </div>
                     <br>
@@ -39,19 +46,20 @@
                                 src="http://localhost/AppWeb/public/resource/img/preloader.gif" class="img-fluid"
                                 alt="..."></div>
                         <div class="col-sm-8">
-                            <p style="text-align: justify; color: white;" id="text4"></p>
+                            <img id="respuestaC" src="http://localhost/AppWeb/public/resource/img/preloader3.gif"
+                                class="img-fluid" alt="...">
                         </div>
                     </div>
                     <br>
                     <div style="text-align: center; color: white; border-radius: 5px; border: red 2px solid;">
-                        <p id="text" style="font-size: 25px;">Lineas de atencion <i class="fas fa-phone"></i> (037) 595 5775 Ext. 101 – 102, <i class="fas fa-mobile"></i> 3152732114, 3156785070</p>
+                        <p id="text" style="font-size: 25px;">Lineas de atencion <i class="fas fa-phone"></i> (037) 595
+                            5775 Ext. 101 – 102, <i class="fas fa-mobile"></i> 3152732114, 3156785070</p>
                     </div>
                     <br>
                 </div>
                 <br>
                 <a href="http://localhost/AppWeb/">
-                    <button onclick="return pregunta1()" type="button" class="btn btn-primary btn-lg"
-                        style="width: 100%;">
+                    <button type="button" class="btn btn-primary btn-lg" style="width: 100%;">
                         <div class="row">
                             <div class="col" style="text-align: left;">
                                 Finalizar
