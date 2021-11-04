@@ -51,21 +51,6 @@
     opacity: 0.8;
 }
 
-#eleccionsi {
-    background-color: #3ea91e;
-}
-
-#eleccionno {
-    background-color:  #a91e1e;
-}
-
-#eleccionsi, #eleccionno{
-    width: 100%;
-    opacity: 0.8;
-    font-family: 'PT Sans', sans-serif;
-    font-weight: bold;
-}
-
 #p2-op1, #p2-op2, #p2-op3, #p2-op4, #checkbox1 {
     font-size: 20px;
 }
@@ -107,10 +92,6 @@
     -webkit-box-shadow: 0px 1px 5px 3px rgba(42,109,179,0.35);
     -moz-box-shadow: 0px 1px 5px 3px rgba(42,109,179,0.35);
 }
-
-#progressbar1, #progressbar1 {
-    height: 10px;
-} 
 
 #doctor, #imc {
     border-radius: 5px;

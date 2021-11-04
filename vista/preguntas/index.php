@@ -62,18 +62,16 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="card mb-3">
+                    <a onclick="eleccionSi()" style="cursor: pointer;">
                     <img src="<?php echo constant('URL') ?>public/resource/img/si.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <button id="eleccionsi" onclick="eleccionSi()" type="button" class="btn btn-primary">SI</button>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="card mb-3">
+                    <a href="portafolio.php">
                     <img src="<?php echo constant('URL') ?>public/resource/img/no.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a id="eleccionno" href="portafolio.php" class="btn btn-primary">NO</a>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

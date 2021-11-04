@@ -169,18 +169,18 @@ function cargarTexto() {
         } else
         if (24.9 < imc && imc <= 29.9) {
             img1.src = URLD + "public/resource/img/equipoT.png";
-            /* img2.src = URLD + "public/resource/img/prueba.png";
-            img3.src = URLD + "public/resource/img/balon.png"; */  
+           /*  img2.src = URLD + "public/resource/img/prueba.png"; */
+            img3.src = URLD + "public/resource/img/procesoT.png";  
         } else
         if (29.9 < imc && imc <= 34.9) {
             img1.src = URLD + "public/resource/img/equipoT.png";
             img2.src = URLD + "public/resource/img/escaleraT.png";
-            /* img3.src = URLD + "public/resource/img/prueba.png"; */
+            img3.src = URLD + "public/resource/img/procesoT.png";
         } else
         if (imc >= 35) {
             img1.src = URLD + "public/resource/img/equipoT.png";
             img2.src = URLD + "public/resource/img/escaleraT.png";
-            /* img3.src = URLD + "public/resource/img/prueba.png"; */
+            img3.src = URLD + "public/resource/img/procesoT.png";
         }    
     }, 1000)
 }
@@ -206,17 +206,17 @@ function cargarRespuestas() {
     if (24.9 < imc && imc <= 29.9) {
         img1.src = URLD + "public/resource/img/equipo.png";
         img2.src = URLD + "public/resource/img/apoyo.png";
-        img3.src = URLD + "public/resource/img/balon.png";  
+        img3.src = URLD + "public/resource/img/proceso.png";  
     } else
     if (29.9 < imc && imc <= 34.9) {
         img1.src = URLD + "public/resource/img/equipo.png";
         img2.src = URLD + "public/resource/img/escalera.png";
-        img3.src = URLD + "public/resource/img/prueba.png";
+        img3.src = URLD + "public/resource/img/proceso.png";
     } else
     if (imc >= 35) {
         img1.src = URLD + "public/resource/img/equipo.png";
         img2.src = URLD + "public/resource/img/escalera.png";
-        img3.src = URLD + "public/resource/img/prueba.png";
+        img3.src = URLD + "public/resource/img/proceso.png";
     }    
     }, 1000)
 }
