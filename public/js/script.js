@@ -74,7 +74,7 @@ function pregunta1() {
                 confirmButtonColor: '#2a6db3'
             })
         } else
-            if (edad.length == 0 || estatura.length == 0 || peso.length == 0) {
+            if (edad == "" || estatura == "" || peso == "") {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
