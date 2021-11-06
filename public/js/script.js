@@ -160,16 +160,16 @@ function cargarTexto() {
         if (imc < 18.5) {
             img1.src = URLD + "public/resource/img/ejercicioT.png";
             img2.src = URLD + "public/resource/img/dietaT.png";
-            /* img3.src = URLD + "public/resource/img/prueba.png"; */
+            img3.src = URLD + "public/resource/img/controlT.png";
         } else
         if (18.5 <= imc && imc <= 24.9) {   
             img1.src = URLD + "public/resource/img/ejercicioT.png";
             img2.src = URLD + "public/resource/img/dietaT.png";
-            /* img3.src = URLD + "public/resource/img/prueba.png"; */
+            img3.src = URLD + "public/resource/img/controlT.png";
         } else
         if (24.9 < imc && imc <= 29.9) {
             img1.src = URLD + "public/resource/img/equipoT.png";
-           /*  img2.src = URLD + "public/resource/img/prueba.png"; */
+            img2.src = URLD + "public/resource/img/apoyoT.png";
             img3.src = URLD + "public/resource/img/procesoT.png";  
         } else
         if (29.9 < imc && imc <= 34.9) {
