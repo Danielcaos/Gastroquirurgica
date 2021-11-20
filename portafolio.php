@@ -69,6 +69,8 @@
                     <li id="text" class="list-group-item">Nutrición y dietética</li>
                     <li id="text" class="list-group-item">Ortopedia y/o Traumatología</li>
                     <li id="text" class="list-group-item">Psicología</li>
+                    <li id="text" class="list-group-item">Ginecología oncológica</li>
+                    <li id="text" class="list-group-item">Mastología</li>
                 </ul>
             </div>
         </div>
@@ -84,6 +86,8 @@
                     <li id="text" class="list-group-item">Ortopédica</li>
                     <li id="text" class="list-group-item">Coloproctología</li>
                     <li id="text" class="list-group-item">Cabeza y cuello</li>
+                    <li id="text" class="list-group-item">Ginecología oncológica</li>
+                    <li id="text" class="list-group-item">Mastología</li>
                 </ul>
             </div>
         </div>
