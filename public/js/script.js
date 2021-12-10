@@ -55,7 +55,6 @@ function pregunta1() {
     estatura = document.getElementById('estatura').value;
     peso = document.getElementById('peso').value;
     genero = document.getElementById('genero').value;
-    departamentos = document.getElementById('departamentos').value;
     var regexp = /^\d+(\.\d{1,2})/;
 
     if (genero == 'Genero') {
@@ -66,14 +65,6 @@ function pregunta1() {
             confirmButtonColor: '#2a6db3'
         })
     } else
-        if (departamentos == 'Departamento') {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor seleccione un departamento',
-                confirmButtonColor: '#2a6db3'
-            })
-        } else
             if (edad == "" || estatura == "" || peso == "") {
                 Swal.fire({
                     icon: 'error',
@@ -143,6 +134,8 @@ function pregunta1() {
                         }, 2000)
                     },
                     error: function (r) {
+                        r.responseText;
+                        consolo.log(r);
                         alert("Error del servidor");
                     }
                 });

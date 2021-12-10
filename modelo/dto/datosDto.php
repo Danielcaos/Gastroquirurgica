@@ -4,15 +4,13 @@
 
         public $correo;
         public $genero;
-        public $departamento;
         public $edad;
         public $estatura;
         public $peso;
 
-        public function __construct($correo, $genero, $departamento, $edad, $estatura, $peso){
+        public function __construct($correo, $genero, $edad, $estatura, $peso){
             $this->correo = $correo;
             $this->genero = $genero;
-            $this->departamento = $departamento;
             $this->edad = $edad;
             $this->estatura = $estatura;
             $this->peso = $peso;
@@ -32,14 +30,6 @@
         
         public function setGenero($genero){
             $this ->genero = $genero;
-        }
-
-        public function getDep(){
-            return $this->departamento;
-        }
-        
-        public function setDep($departamento){
-            $this ->departamento = $departamento;
         }
 
         public function getEdad(){

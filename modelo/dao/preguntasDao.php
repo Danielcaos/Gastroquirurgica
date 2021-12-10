@@ -26,14 +26,13 @@
 
         public function insertarDatos($datos){
 
-            $datos = new datosDto($datos['correo'], $datos['genero'], $datos['departamento'], $datos['edad'], $datos['estatura'], $datos['peso']);
+            $datos = new datosDto($datos['correo'], $datos['genero'], $datos['edad'], $datos['estatura'], $datos['peso']);
     
-            $query = $this->db->connect()->prepare('INSERT INTO datos (correo, genero, departamento, edad, estatura, peso) VALUES (:correo, :genero, :departamento, :edad, :estatura, :peso)');
+            $query = $this->db->connect()->prepare('INSERT INTO datos (correo, genero, edad, estatura, peso) VALUES (:correo, :genero, :edad, :estatura, :peso)');
             try{
                 $query->execute([
                     'correo' => $datos->getCorreo(),
                     'genero' => $datos->getGenero(),
-                    'departamento' => $datos->getDep(),
                     'edad' => $datos->getEdad(),
                     'estatura' => $datos->getEstatura(),
                     'peso' => $datos->getPeso()

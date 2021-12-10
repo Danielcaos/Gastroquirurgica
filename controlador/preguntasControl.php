@@ -19,7 +19,6 @@ class preguntasControl extends Controller{
         {
 
             $constr = "preguntas";
-            $this->cargarDep();
             if (isset($ubicacion[0])) {
                 $this->view->render($constr, $ubicacion[0]);
             } else {
@@ -27,12 +26,7 @@ class preguntasControl extends Controller{
             }
         }
 
-        function cargarDep(){
-
-            $this->view->datos = $this->model->listarDep();
-            
-
-        }
+        
 
         function imc($param = null){
             $peso = $param[0];
@@ -51,7 +45,6 @@ class preguntasControl extends Controller{
 
         function registrarDatos(){
             $genero = $_POST['genero'];
-            $dep = $_POST['dep'];
             $edad = $_POST['edad'];
             $estatura = $_POST['estatura'];
             $peso = $_POST['peso'];
@@ -69,7 +62,7 @@ class preguntasControl extends Controller{
             echo $JString; */
             $this->model->insertarUsuario(['correo'=>$correo]);
 
-            $this->model->insertarDatos(['correo'=>$correo, 'genero'=>$genero, 'departamento'=>$dep, 'edad'=>$edad, 'estatura'=>$estatura, 'peso'=>$peso]);
+            $this->model->insertarDatos(['correo'=>$correo, 'genero'=>$genero, 'edad'=>$edad, 'estatura'=>$estatura, 'peso'=>$peso]);
             session_destroy();
         }
         

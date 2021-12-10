@@ -80,14 +80,6 @@
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
                         </select>
-                        <div style="padding-bottom: 17px;"></div>
-                        <select id="departamentos" class="form-select" aria-label="Default select example" name="dep">
-                            <option selected>Departamento</option>
-                            <?php for ($m = 0; $m < count($this->datos); $m++) : ?>
-                            <option value="<?php echo rtrim($this->datos[$m]['nombre'], "") ?>">
-                                <?php echo rtrim($this->datos[$m]['nombre'], "") ?></option>
-                            <?php endfor; ?>
-                        </select>
                         <div class="input-group mb-3" style="padding-top: 17px;">
                             <input id="edad" type="number" class="form-control" placeholder="Edad" aria-label="Username"
                                 aria-describedby="basic-addon1" name="edad">
